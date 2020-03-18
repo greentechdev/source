@@ -1,0 +1,9 @@
+<div class="shortcode shortcode--box-preview">
+	<iframe
+		src='https://app.box.com/embed/s/{{ .Get "id" }}'
+		frameborder="0"
+		scrolling="no"
+		width="100%"
+		height='{{ with .Get "height" }}{{.}}{{else}}600{{end}}'>
+	</iframe>
+</div>

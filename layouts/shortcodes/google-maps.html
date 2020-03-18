@@ -1,0 +1,9 @@
+<div class="shortcode shortcode--google-maps">
+	<iframe
+		src='https://www.google.com/maps/embed/v1/place?key={{ with .Get "key" }}{{ . }}{{ else }}{{ .Site.Params.googleMapsAPIKey }}{{end}}&q={{ .Get "location" }}'
+		frameborder="0"
+		scrolling="no"
+		width="100%"
+		height='{{ with .Get "height" }}{{.}}{{else}}400{{end}}'>
+	</iframe>
+</div>

@@ -1,0 +1,13 @@
+<div class="shortcode shortcode--pastebin shortcode--code" id='pastebin-{{ .Get "id" }}'>
+	{{ if .Get "height" }}
+	<style>
+		#pastebin-{{ .Get "id" }} .embedPastebin ol.text {
+			overflow: auto;
+			max-height: {{ .Get "height" }};
+		}
+	</style>
+	{{ end }}
+
+	<script src='//pastebin.com/embed_js/{{ .Get "id" }}'></script>
+</div>
+

@@ -1,0 +1,10 @@
+<div class="shortcode shortcode--jsfiddle shortcode--code">
+	<iframe
+		width="100%"
+		height='{{ with .Get "height" }}{{.}}{{else}}300{{end}}'
+		src='//jsfiddle.net/{{ .Get "id" }}{{ with .Get "rev" }}/{{.}}{{end}}/embedded/{{ with .Get "view"}}{{ . }}{{else}}js,html,css,result{{end}}/{{with .Get "color"}}{{.}}{{end}}'
+		allowfullscreen="allowfullscreen"
+		frameborder="0">
+	</iframe>
+</div>
+

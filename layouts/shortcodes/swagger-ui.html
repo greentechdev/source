@@ -1,0 +1,9 @@
+<div class="shortcode shortcode--swagger-ui">
+	<iframe
+		src='{{ .Get "url" }}'
+		frameborder="0"
+		scrolling="yes"
+		width="100%"
+		height='{{ with .Get "height" }}{{.}}{{else}}600{{end}}'>
+	</iframe>
+</div>
