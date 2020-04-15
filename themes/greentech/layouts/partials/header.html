@@ -1,0 +1,30 @@
+<header>
+  <nav class="navbar navbar-expand-md fixed-top navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="/gtd_logo_sm.png" style="width: 261px; height: 39px;" alt="logo"></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        {{ if .IsHome }}
+          <form class="form-inline mt-1 mt-md-0 flex-grow-1">
+            <input class="form-control mx-4 w-100" type="text" id="search" onkeyup="filterCards()" placeholder="Type to filter list..." aria-label="Search">
+          </form>
+        {{ else }}
+        <div class="mt-1 mt-md-0 flex-grow-1"></div>
+        {{ end }} 
+        <div class="d-flex justify-content-center">
+          <ul class="navbar-nav">
+            {{ $currentPage := . }}
+              {{ range .Site.Menus.main }}
+                <li class="nav-item {{ if eq $currentPage.Permalink .URL }}active{{ end }}">
+                  <a class="nav-link" href="{{ .URL }}">{{ .Name }}</a>
+                </li>
+              {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>

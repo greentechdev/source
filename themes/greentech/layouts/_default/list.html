@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+  <p class="lead">An initiative by the Swedish EPA to provide a piece of the puzzle of solving our common challenges, 
+    by providing a one-stop shop for all our data.
+  </p>
+  <div id="cardsList" class="row">
+
+  {{ range .Site.RegularPages.ByTitle }}
+    {{ if eq .Type "data"}}
+        <div class="col-sm-6 col-md-4 col-lg-3">
+          <div class="card card-list">
+            <div class="card-body">
+              <p class="text-muted pb-3">#
+                {{ range .Params.tags }}
+                  {{ . }}
+                {{ end }}
+              </p>
+              <h5 class="card-title">{{ .Title }}</h5>
+              <a href="{{ .Permalink }}" class="stretched-link card-text">{{ .Description }}</a>
+            </div>
+          </div>
+        </div>
+
+    {{ end }}
+  {{ end }}
+
+  </div>
+{{ end }}
