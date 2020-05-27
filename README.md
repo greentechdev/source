@@ -1,5 +1,5 @@
-# docs
-Documentation website source code.
+# GreenTechDev website
+This repository contains the [GreenTechDev website](https://greentechdev.github.io) source code.
 
 Website made with Hugo (https://gohugo.io/).
 
