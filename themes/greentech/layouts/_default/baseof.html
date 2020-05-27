@@ -4,12 +4,13 @@
 {{- partial "head.html" . -}}
 
 <body class="d-flex flex-column h-100">
-	
+		
 	{{- partial "header.html" . -}}
 	
 	<main role="main" class="flex-shrink-0">
 		
 		<div class="container mb-5">
+			{{- partial "browserwarning.html" . -}}
 			
 			{{- block "main" . }}{{- end }}
 			
@@ -18,7 +19,9 @@
 	</main>
 
 	{{- partial "footer.html" . -}}
-			
-</body>
-
+	
+	
+	{{- partial "cookie-consent.html" . -}}
+	
+</body>	
 </html>

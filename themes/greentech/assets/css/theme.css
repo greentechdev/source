@@ -31,6 +31,18 @@ a, a:hover {
   background-color: white!important;
 }
 
+#navbarToggleCbox:checked ~ .collapse {
+  display:block;
+}
+
+#navbarToggleCbox {
+ display: none;
+}
+
+.navbar-toggler {
+  padding: .2rem .5rem;
+}
+
 main > .container {
   padding-top: 90px;
 }
@@ -47,6 +59,10 @@ main > .container {
 
 .card h5 {
   color: #46be2f;
+}
+
+.btn-success {
+  background-color: #46be2f;
 }
 
 a.stretched-link {
@@ -114,15 +130,50 @@ footer {
   color: #fff;
 }
 
-footer a {
+footer a, #cookie-consent a {
   color: #eee;
   text-decoration: none;
 }
 
-footer a:hover, footer a:active {
+footer a:hover, footer a:active, #cookie-consent a:hover, #cookie-consent a:active {
   color: #fff;
 }
 
 footer svg {
   vertical-align: baseline;
+}
+
+#cookie-consent a {
+  text-decoration: underline;
+}
+
+#cookie-consent {
+  background-color: #333;
+  padding: .9rem;
+  color: #e5e5e5;
+  display: none;
+}
+
+a.btn {
+  text-decoration: none;
+}
+
+td, th {
+  padding: 0.5rem;
+}
+
+ul.inner {
+  display:none;
+} 
+
+.highlight {
+  margin-bottom: 0.5rem;
+}
+
+button.try-button {
+  margin-bottom: 1.5rem;
+}
+
+ol>li {
+  margin-bottom: 0.7rem;
 }

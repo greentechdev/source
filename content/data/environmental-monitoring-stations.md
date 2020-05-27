@@ -6,6 +6,14 @@ Tags: ["API", "GEO"]
 Draft: false
 ---
 
+```js
+var body = document.body;
+var textContent = body.textContent || body.innerText;
+
+console.log(textContent);  //   a bc
+```
+{{< fiddle >}}
+
 # Environmental monitoring stations
 
 Data about the national environmental monitoring stations...
@@ -19,6 +27,13 @@ Our APIs and data are provided "as is" without guarantees concerning potential e
 ## Data model
 
 ...
+```js
+var body = document.body;
+var textContent = body.textContent || body.innerText;
+
+console.log(textContent);  //   a cajsdlkaldja
+```
+{{< fiddle >}}
 
 ## Distributions
 

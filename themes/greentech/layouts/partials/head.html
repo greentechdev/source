@@ -2,35 +2,11 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="">
-	<meta name="author" content="">
-	<title>GreenTechDev</title>
-	
+	<meta name="description" content="{{ .Description }}">
+	<meta name="author" content="Naturvårdsverket - Swedish EPA">
+	<title>{{ if (isset .Params "title") }}{{ .Title }} - GreenTechDev{{ else }}GreenTechDev{{ end }}</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-	<link rel="stylesheet" href="/css/theme.css">
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap.native/2.0.27/bootstrap-native-v4.min.js" integrity="sha256-k5gE8gnbCCVtz/4z2LzbAIpMdH8K1Bjl4cTCjm6SZS8=" crossorigin="anonymous"></script>-->
-	<script>
-		function filterCards() {
-			// Declare variables
-			var input, filter, ul, li, a, i, txtValue;
-			input = document.getElementById('search');
-			filter = input.value.toUpperCase();
-			cardsList = document.getElementById("cardsList");
-			cards = cardsList.getElementsByClassName('card');
-			
-			// Loop through all list items, and hide those who don't match the search query
-			for (i = 0; i < cards.length; i++) {
-				p = cards[i].getElementsByTagName("p")[0]
-				h = cards[i].getElementsByTagName("h5")[0]
-				a = cards[i].getElementsByTagName("a")[0];
-				txtValue = (a.textContent || a.innerText) + (p.textContent || p.innerText) + (h.textContent || h.innerText);
-				if (txtValue.toUpperCase().indexOf(filter) > -1) {
-					cards[i].parentElement.style.display = "";
-				} else {
-					cards[i].parentElement.style.display = "none";
-				}
-			}
-		}
-	</script>
-	
+	<!-- minify css -->
+	{{ $style := resources.Get "css/theme.css" | resources.Minify | resources.Fingerprint }}
+	<link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
