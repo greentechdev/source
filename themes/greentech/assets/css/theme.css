@@ -23,6 +23,10 @@ a, a:hover {
   padding-top: 1rem;
 }
 
+img {
+  max-width: 100%;
+}
+
 .navbar {
   border-bottom: 1px solid #eee;
 }
@@ -128,11 +132,17 @@ i.active {
 footer {
   background-color: #46be2f;
   color: #fff;
+  padding-bottom: 1.9rem!important;
+}
+
+#footer-background {
+  width: 100%;
 }
 
 footer a, #cookie-consent a {
   color: #eee;
   text-decoration: none;
+  font-weight: bolder;
 }
 
 footer a:hover, footer a:active, #cookie-consent a:hover, #cookie-consent a:active {
@@ -140,7 +150,7 @@ footer a:hover, footer a:active, #cookie-consent a:hover, #cookie-consent a:acti
 }
 
 footer svg {
-  vertical-align: baseline;
+  vertical-align: sub;
 }
 
 #cookie-consent a {
@@ -157,7 +167,15 @@ footer svg {
 a.btn {
   text-decoration: none;
 }
-
+html {
+  scroll-padding-top: 75px; /* height of fixed header, to make anchor links visible */
+}
+a.headline-anchor { 
+  visibility: hidden;
+}
+h2:hover a, h3:hover a, h4:hover a, h5:hover a { 
+  visibility: visible
+}
 td, th {
   padding: 0.5rem;
 }

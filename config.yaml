@@ -1,6 +1,13 @@
 baseURL: "/"
 languageCode: "en-uk"
-title: "GreenTechDev"
+title: "Greentechdev"
+params:
+  codeRepo: "https://github.com/greentechdev/docs"
+  pageEditPath: "edit/master/content"
+  siteURL: "https://greentechdev.github.io"
+  author: "Naturvårdsverket - Swedish EPA"
+  description: "Greentechdev is a initiative by the Swedish EPA to provide easy to use open data in the environmental domain."
+enableGitInfo: true 
 menu:
   main:
   - identifier: home
@@ -15,9 +22,6 @@ menu:
     name: Support
     url: /support/
     weight: -110
-params:
-  codeRepo: "https://github.com/greentechdev/docs"
-  pageEditPath: "edit/master/content"
 markup:
   highlight:
     codeFences: true
@@ -29,3 +33,11 @@ markup:
     noClasses: true
     style: tango
     tabWidth: 2
+outputs:
+  home:
+  - HTML
+  - RSS
+  - JSON
+  page:
+  - HTML
+  - JSON

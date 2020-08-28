@@ -26,7 +26,7 @@ The data is made available through a HTTP/REST API.
 
 ### REST API
 
-..
+...
 
 ## Example usage
 

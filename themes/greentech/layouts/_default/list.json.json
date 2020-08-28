@@ -1,0 +1,8 @@
+[{{ range $index, $val := where .Site.RegularPages.ByTitle "Type" "data" }}
+  {{ if $index }}, {{ end }}{
+"name": "{{ .Title }}",
+"updated": "{{ .Date.Format "2006-01-02"}}",
+"description" : "{{ .Description }}",
+"permalink" : "{{ .Permalink }}",
+"tags": {{ jsonify .Params.tags }}
+}{{ end }}]

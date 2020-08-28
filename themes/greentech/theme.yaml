@@ -1,8 +1,5 @@
 name: "Greentech"
 license: "MIT"
 licenselink: "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
 homepage: "http://www.naturvardsverket.se/"
-tags = []
-features = []
-min_version = "0.41"
+min_version: "0.41"

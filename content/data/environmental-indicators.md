@@ -2,7 +2,7 @@
 Title: "Environmental indicators"
 Date: 2020-05-23
 Description: "Indicators and data related to the national environmental objectives (e.g. fresh air)"
-Tags: ["API"]
+Tags: ["indicator"]
 Draft: false
 ---
 

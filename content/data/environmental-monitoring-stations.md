@@ -1,18 +1,9 @@
 ---
 Title: "Environmental monitoring stations"
-Date: 2020-02-25
 Description: "Data about the national environmental monitoring stations"
-Tags: ["API", "GEO"]
+Tags: ["sites", "geo"]
 Draft: false
 ---
-
-```js
-var body = document.body;
-var textContent = body.textContent || body.innerText;
-
-console.log(textContent);  //   a bc
-```
-{{< fiddle >}}
 
 # Environmental monitoring stations
 
@@ -27,13 +18,6 @@ Our APIs and data are provided "as is" without guarantees concerning potential e
 ## Data model
 
 ...
-```js
-var body = document.body;
-var textContent = body.textContent || body.innerText;
-
-console.log(textContent);  //   a cajsdlkaldja
-```
-{{< fiddle >}}
 
 ## Distributions
 
@@ -41,7 +25,7 @@ The data is made available through a HTTP/REST API.
 
 ### REST API
 
-..
+...
 
 ## Example usage
 

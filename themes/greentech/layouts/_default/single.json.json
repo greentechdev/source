@@ -1,0 +1,26 @@
+{{/*
+  //Create links for embedded fiddles: 
+  {{ $content1 := replaceRE "{{< jsfiddle id=\"(\\w+)\"\\srev=\"(\\d+).*>}}" "[Demo](https://jsfiddle.net/$1/$2/)" .RawContent }}  
+  //Drop dynamically created fiddles including trailing newline 
+  {{ $content2 := replaceRE "{{< (fiddle printResults|swagger-ui).*>}}\\r\\n\\s+" "" $content1 }}
+  //Remove extra line breaks
+  {{ $content3 := replaceRE "\\r\\n\\s+\\r" "\\r" $content2 }}
+  //Replace image shortcode with markdown image 
+  {{ $content4 := replaceRE "{{< figure src=\"\\/([\\w\\s-]+\\.[A-Za-z]{3})\" alt=\\W([\\w\\s]+)\\W >}}" (printf "![$2](%s/$1)" .Site.Params.siteURL) $content3 }}
+  //Replace title shortcode with the title content
+  {{ $content5 := replace $content4 "{{< param Title >}}" .Title }}
+  //The following to to turn \n\r interpreted as text into real newlines in the markdown content
+  {{ $content6 := replaceRE "\"" "\\\"" $content5 }}
+  {{ $content7 := replaceRE "\n" "\\n" $content6 }}
+  {{ $content8 := replaceRE "\r" "\\r" $content7 }}
+
+  //All the above are put into a single line to avoid empty rows in the generated json-response file.
+  */}}
+{
+  "name": "{{ .Title }}",
+  "updated": "{{ .Date }}",
+  "description" : "{{ .Description }}",
+  "permalink" : "{{ .Permalink }}",
+  "tags": {{ jsonify .Params.tags }},
+  "content" : "{{ .RawContent | replaceRE "{{< jsfiddle id=\"(\\w+)\"\\srev=\"(\\d+).*>}}" "[Demo](https://jsfiddle.net/$1/$2/)" | replaceRE "{{< (fiddle printResults|swagger-ui).*>}}\\r\\n\\s+" "" | replaceRE "\\r\\n\\s+\\r" "\\r" | replaceRE "{{< figure src=\"\\/([\\w\\s-]+\\.[A-Za-z]{3})\" alt=\\W([\\w\\s]+)\\W >}}" (printf "![$2](%s/$1)" .Site.Params.siteURL) | replaceRE "{{< param Title >}}" .Title | replaceRE "\"" "\\\"" | replaceRE "\n" "\\n" | replaceRE "\r" "\\r" }}"
+}

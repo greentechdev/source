@@ -7,19 +7,31 @@
 <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
 
 <!-- footer -->
-<footer class="mt-auto py-3">
+<footer class="mt-auto">
+  <img id="footer-background" src="/landscape.svg" />
   <div class="container">
-    {{ if not .IsHome }}
-    <p class="float-right"><a href="{{ .Site.Params.codeRepo }}/{{ .Site.Params.pageEditPath }}/{{ replace .File.Path "\\" "/" }}" target="_blank" rel="noopener">
-      <svg class="mr-1" id="i-compose" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="15" height="15" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-        <path d="M27 15 L27 30 2 30 2 5 17 5 M30 6 L26 2 9 19 7 25 13 23 Z M22 6 L26 10 Z M9 19 L13 23 Z"></path>
-      </svg>Edit this page</a> 
-    </p>
-    {{ end }}
-    <p>&copy; GreenTechDev 2020<br />
-      Website/documentation provided as <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a><br />
-      Code examples provided as <a href="{{ .Site.Params.codeRepo }}/blob/master/LICENSE" target="_blank">MIT</a><br />
-      Our <a href="{{ ref . "/cookie-policy.md" }}">Cookie policy</a><br />
-    </p>
+    <div class="row">
+      <div class="col-sm">
+        &copy; GreenTechDev 2020<br />
+        Website/docs provided as <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a><br />
+        Code examples provided as <a href="{{ .Site.Params.codeRepo }}/blob/master/LICENSE" target="_blank">MIT</a><br />
+        Our <a href="{{ ref . "/cookie-policy.md" }}">Cookie policy</a><br />
+        Last updated {{ .Lastmod.Format "2006-01-02" }}
+
+      </div>
+      <div class="col-sm">
+        <p class="float-md-right">
+        {{ if not .IsHome }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-edit"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+          <a href="{{ .Site.Params.codeRepo }}/{{ .Site.Params.pageEditPath }}/{{ replace .File.Path "\\" "/" }}" target="_blank" rel="noopener">
+          Improve this page</a><br /> 
+        {{ end }}
+        {{ if (or (eq .Type "data") (.IsHome)) }}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-code"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+          <a href="{{ .Permalink}}index.json"> This page in JSON</a>
+        {{ end }}
+          </p>
+      </div>
+    </div>
   </div>
 </footer>

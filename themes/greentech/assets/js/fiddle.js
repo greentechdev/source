@@ -28,5 +28,5 @@ function fiddle(elem, printResults, displayChart) {
   document.body.appendChild(form);
 
   form.submit();
-
+  form.remove();
 }

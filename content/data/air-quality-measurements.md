@@ -1,14 +1,13 @@
 ---
 Title: "Air quality measurements"
-Date: 2020-02-25
-Description: "Near real-time national air quality data from measuring stations"
-Tags: ["API"]
+Description: "Near real-time national air quality data from measuring stations - the air quality data provides information on the levels of various air pollutants, including particles, nitrogen dioxide and ground-level ozone, in Swedish cities and in rural areas. The data is made available via a HTTP/REST API with various usage examples."
+Tags: ["air","geo"]
 Draft: false
 ---
 
 # Air quality measurements
 
-The air quality data provides information on levels of various air pollutants, including particles, nitrogen dioxide and ground-level ozone, in Swedish cities and in rural areas. The data is provided in cooperation with [SMHI](https://smhi.se).
+{{< param Description >}} The data is provided in cooperation with [SMHI](https://smhi.se).
 
 See [Luftkvaliteten i realtid och preliminär statistik](https://www.naturvardsverket.se/Sa-mar-miljon/Klimat-och-luft/Statistik-om-luft/Luftkvaliteten-i-realtid/) for more information (Swedish).
 
@@ -18,9 +17,7 @@ No information.
 
 ## License & conditions 
 
-The data is licensed under [Creative Commons Zero, CC0](https://creativecommons.org/publicdomain/zero/1.0/).
-
-Our APIs and data are provided "as is" without guarantees concerning potential errors in the data, availability and performance of the API and similar.  We reserve the right to block individual IP addresses or, alternatively, to completely shut down services in the event of obvious abuse.
+{{< license-cc0 >}}
 
 ## Data model
 
@@ -78,6 +75,7 @@ So in three simple steps:
 
 1) Using the Station-resource to find a station monitoring our phenomena close to Hornsgatan
 
+
     ```js
     //URL to find stations filtered by our phenomenon ID 
     var url = "https://shair.smhi.se/52North/api/v1/stations/?phenomena=8";
@@ -105,6 +103,7 @@ So in three simple steps:
     {{< fiddle printResults="true" displayChart="false" >}}
     
     in the resultset we pick this station:
+
     ```js
     {
       "type": "Feature",

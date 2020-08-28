@@ -2,7 +2,7 @@
 Title: "Industrial facilities"
 Date: 2020-02-25
 Description: "Data related to the environment from industrial facilities in Sweden"
-Tags: ["API"]
+Tags: ["sites", "geo"]
 Draft: false
 ---
 
@@ -26,7 +26,7 @@ The data is made available through a HTTP/REST API.
 
 ### REST API
 
-..
+...
 
 ## Example usage
 

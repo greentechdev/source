@@ -8,10 +8,11 @@
 	{{- partial "header.html" . -}}
 	
 	<main role="main" class="flex-shrink-0">
-		
+
 		<div class="container mb-5">
+
 			{{- partial "browserwarning.html" . -}}
-			
+			{{- block "main2" . }}{{- end }}
 			{{- block "main" . }}{{- end }}
 			
 		</div>
