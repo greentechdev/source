@@ -22,20 +22,28 @@ jobs:
  
       - name: Build site with hugo cli
         run: hugo -t greentech
-
-      - name: Navigate to built public-dir
-        run: cd public
         
       - name: Statuscheck 1
         run: |
           pwd
+          cd public
+          pwd
+
+      - name: Statuscheck 2
+        run: |
+          cd public
           ls
+
+      - name: Statuscheck 3
+        run: |
+          cd public
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git status -v
-      
+
       - name: Commit and push \public to it's submodule repository
         run: |
+          cd public
           git add .
           git commit -m "Automated deployment: $(date -R)"
           git push origin master
