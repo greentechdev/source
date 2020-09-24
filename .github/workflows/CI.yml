@@ -24,12 +24,18 @@ jobs:
         run: hugo -t greentech
 
       - name: Navigate to built public-dir
-        run: cd public
+        run: cd public |
+        
+      - name: Statuscheck 1
+        run: |
+          pwd
+          ls
+          git config user.name "${GITHUB_ACTOR}"
+          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+          git status -v
       
       - name: Commit and push \public to it's submodule repository
         run: |
-          git config user.name "${GITHUB_ACTOR}"
-          git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add .
           git commit -m "Automated deployment: $(date -R)"
           git push origin master
