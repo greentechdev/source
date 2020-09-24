@@ -24,7 +24,7 @@ jobs:
         run: hugo -t greentech
 
       - name: Navigate to built public-dir
-        run: cd public |
+        run: cd public
         
       - name: Statuscheck 1
         run: |
