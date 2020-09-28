@@ -143,8 +143,9 @@ So in three simple steps:
 
     //Call the API to get the data
     //use /nolinks to avoid retrieving data we won't use
+    //increase the limit to make sure we get all sites
     //filter by species group (i.e. "artgrupp")
-    fetch("https://nvpub.vic-metria.nu/n2000/rest/omrade/nolinks?artgrupp=F%20-%20Fiskar")
+    fetch("https://nvpub.vic-metria.nu/n2000/rest/omrade/nolinks?limit=1000&artgrupp=F%20-%20Fiskar")
       .then(response => response.json())
       .then(data => {
         data.forEach(function(item) {
