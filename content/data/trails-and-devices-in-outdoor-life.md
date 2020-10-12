@@ -8,7 +8,7 @@ Draft: false
 
 # Trails and devices in outdoor life
 
-Trails and devices (e.g. toilets, parking lots) in national parks or other nature areas...
+Trails and devices (e.g. toilets, parking lots) in national parks or other nature areas... TBD
 
 ## License & conditions
 
@@ -18,7 +18,7 @@ Our APIs and data are provided "as is" without guarantees concerning potential e
 
 ## Data model
 
-...
+TBD
 
 ## Distributions
 
@@ -43,7 +43,6 @@ https://developers.arcgis.com/rest/services-reference/query-feature-service-laye
 and
 https://developers.arcgis.com/documentation/common-data-types/geometry-objects.htm
 
-
 The API provides two means of filtering of data: attribute based (using the 'where' parameter) or spatial (using the 'geometry' and 'spatialRel' parameters).
 
 * [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/outdoorlife_api.yaml)
@@ -57,7 +56,6 @@ https://nvpub.vic-metria.nu/arcgis/rest/services/Anordningar_friluftsliv_WFS/Map
 
 The example below uses the attribute based filtering. For an example using spatial filtering see [https://developers.arcgis.com/labs/rest/query-a-feature-layer/](https://developers.arcgis.com/labs/rest/query-a-feature-layer/).
 
-...
-Exempel där OSM visas med leder och anordningar (filtrerat på ingångar och parkeringsplatser) för kontroll av data i OSM, leaflet + 50% transparens på. Utgå från NVR-exemplet.
+TBD
 
 {{< jsfiddle id="aqmo71s4" color="light" view="result" height="380" >}}
