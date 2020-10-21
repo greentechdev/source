@@ -1,16 +1,16 @@
 ---
-Title: National Protected Sites Registry (Naturvårdsregistret, NVR)
+Title: Naturvårdsregistret, NVR
 Date: 2020-10-12
-Description:
+Description: API for data from the official list of protected nature sites in Sweden
 Tags: ["API", "GEO"]
 Draft: false
 ---
 
 # NVR
 
-The list of protected nature sites in Sweden (Naturvårdsregistret, NVR)
+The official list of protected nature sites in Sweden (Naturvårdsregistret, NVR)
 
-... TBD NAPS?
+... TBD
 
 ## License & conditions
 
