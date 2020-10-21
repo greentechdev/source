@@ -66,4 +66,4 @@ The example below show national parks and when clicking on the features in the m
 
 Geometries for the parks are downloaded from https://gpt.vic-metria.nu/data/land/NP.zip, converted to geojson using QGIS and loaded directly from github for brevity of this examle (this could be achieved in code by calling a WFS or ArcGIS REST API service or by utilizing a getFeatureInfo-request on a WMS layer, see *Distributions* for more information.)
 
-{{< jsfiddle id="pj8otq1L" color="light" view="js,result" height="500" >}}
+{{< jsfiddle id="pj8otq1L" color="light" view="result,js,html,css" height="500" >}}
