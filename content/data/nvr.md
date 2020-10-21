@@ -48,7 +48,7 @@ The WFS service is available at
 ArcGIS Server REST API
 * TBD
 
-The 
+See the API [Trails and devices in outdoor life](/data/trails-and-devices-in-outdoor-life) for a description, links and example based on the ArcGIS Server REST API.
   
 ### REST API
 
@@ -59,6 +59,8 @@ The
 
 ## Example usage
 
-TBD
+The example below show national parks and when clicking on the features in the map a call is made to the NVR REST API to get information about the national environmental quality objectives.
+
+Geometries for the parks are downloaded from https://gpt.vic-metria.nu/data/land/NP.zip, converted to geojson using QGIS and loaded directly from github for brevity of this examle (this could be achieved in code by calling a WFS or ArcGIS REST API service or by utilizing a getFeatureInfo-request on a WMS layer, see *Distributions* for more information.)
 
 {{< jsfiddle id="pj8otq1L" color="light" view="js,result" height="500" >}}
