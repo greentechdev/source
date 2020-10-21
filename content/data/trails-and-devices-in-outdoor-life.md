@@ -52,8 +52,6 @@ The API provides two means of filtering of data: attribute based (using the 'whe
 
 {{< swagger-ui url="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/outdoorlife_api.yaml" height="1000" >}}
 
-https://nvpub.vic-metria.nu/arcgis/rest/services/Anordningar_friluftsliv_WFS/MapServer/0/query?where=SKYDDATOMRADE%3D%27Stenshuvud%27&outFields=*&f=geojson
-
 ## Example usage
 
 The example below uses the attribute based filtering. For an example using spatial filtering see [https://developers.arcgis.com/labs/rest/query-a-feature-layer/](https://developers.arcgis.com/labs/rest/query-a-feature-layer/).

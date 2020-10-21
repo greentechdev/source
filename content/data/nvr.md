@@ -24,12 +24,14 @@ To better understand this data, the following model covers the basic parts:
 
 {{< figure src="/nvrmodel.png" alt="NVR data model" >}}
 
-omraden - beslutsdokument - miljomal* - foreskriftstyper* - foreskriftssubtyper* - foreskriftsomrade - nmdklass* - syfte - syften*
 
-* = code list
-
-Difference 
-​/nmdklass​/{nvrId}​/{beslutsstatus}​/{nmdKlassKod} and /omrade/{id}/{beslutsstatus}/nmdklasser?
+| Entity  | Endpoint  |
+|---|---|
+| Site  | /omrade  |
+| Environmental objective  | /miljomal  |
+| Regulations  | /foreskriftstyper and /foreskriftssubtyper  |
+| Purpose  | /syften  |
+| NMD classes  | /nmdklass  |
 
 ## Distributions
 
@@ -46,7 +48,8 @@ The WFS service is available at
 * https://nvpub.vic-metria.nu/arcgis/services/Leder_friluftsliv_WFS/MapServer/WFSServer
 
 ArcGIS Server REST API
-* TBD
+
+TBD (description and link)
 
 See the API [Trails and devices in outdoor life](/data/trails-and-devices-in-outdoor-life) for a description, links and example based on the ArcGIS Server REST API.
   
