@@ -18,7 +18,9 @@ Our APIs and data are provided "as is" without guarantees concerning potential e
 
 ## Data model
 
-TBD
+{{< figure src="/outdoorlifemodel.png" alt="Outdoor life API data model" >}}
+
+The current data model is very basic. There is ongoing work intending to refine this model and the attributes that the public data exposes from the underlying internal data.
 
 ## Distributions
 

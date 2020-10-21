@@ -8,6 +8,8 @@ Draft: false
 
 # NVR
 
+The list of protected nature sites in Sweden (Naturvårdsregistret, NVR)
+
 ... TBD NAPS?
 
 ## License & conditions
@@ -18,7 +20,9 @@ Our APIs and data are provided "as is" without guarantees concerning potential e
 
 ## Data model
 
-TBD
+To better understand this data, the following model covers the basic parts:
+
+{{< figure src="/nvrmodel.png" alt="NVR data model" >}}
 
 omraden - beslutsdokument - miljomal* - foreskriftstyper* - foreskriftssubtyper* - foreskriftsomrade - nmdklass* - syfte - syften*
 
@@ -29,9 +33,9 @@ Difference
 
 ## Distributions
 
-Parts of this data (e.g. the "sites" part of the data model) is also exposed though OGC Standard Compliant WMS and WFS services as well as ArcGIS Server REST API.
+Parts of this data (e.g. the "sites" part of the data model) is also exposed though OGC Standard Compliant WMS and WFS services as well as ArcGIS Server REST API. The OpenApi specification and examples below describe a REST API that exposes the whole data model, but has some limitations in the geographical aspects. If your use case requires spatial data we recommend combining this API with either OGC services or the Esri ArcGIS REST API.
 
-For more information regarding the OGC services, see [this document](https://gpt.vic-metria.nu/data/land/Leder_och_friluftsanordningar_beskrivning_av_oppna_data.pdf) (Swedish, TBD)
+For more information regarding the data and the OGC services, see [this document](https://gpt.vic-metria.nu/data/land/Leder_och_friluftsanordningar_beskrivning_av_oppna_data.pdf) (Swedish)
 
 The WMS service is available at
 * https://nvpub.vic-metria.nu/arcgis/services/Anordningar_friluftsliv/MapServer/WMSServer
@@ -43,6 +47,8 @@ The WFS service is available at
 
 ArcGIS Server REST API
 * TBD
+
+The 
   
 ### REST API
 
@@ -55,4 +61,4 @@ ArcGIS Server REST API
 
 TBD
 
-{{< jsfiddle id="pj8otq1L" color="light" view="result" height="380" >}}
+{{< jsfiddle id="pj8otq1L" color="light" view="js,result" height="380" >}}

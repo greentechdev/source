@@ -24,7 +24,7 @@ No information.
 
 To better understand this data, the following model covers the basic parts:
 
-{{< figure src="/n2000model.png" alt="N2000 model" >}}
+{{< figure src="/n2000model.png" alt="N2000 data model" >}}
 
 * Site - the geographical area being protected 
 * Species - rare species in the site causing it to be protected
