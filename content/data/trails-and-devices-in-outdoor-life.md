@@ -60,4 +60,4 @@ The example below uses the attribute based filtering. For an example using spati
 
 TBD
 
-{{< jsfiddle id="aqmo71s4" color="light" view="result" height="380" >}}
+{{< jsfiddle id="aqmo71s4" color="light" view="js,result" height="500" >}}

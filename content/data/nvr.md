@@ -61,4 +61,4 @@ The
 
 TBD
 
-{{< jsfiddle id="pj8otq1L" color="light" view="js,result" height="380" >}}
+{{< jsfiddle id="pj8otq1L" color="light" view="js,result" height="500" >}}
