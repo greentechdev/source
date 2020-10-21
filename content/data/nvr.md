@@ -29,9 +29,9 @@ To better understand this data, the following model covers the basic parts:
 |---|---|
 | Site  | /omrade  |
 | Environmental objective  | /miljomal  |
-| Regulations  | /foreskriftstyper and /foreskriftssubtyper  |
+| Regulation  | /foreskriftstyper and /foreskriftssubtyper  |
 | Purpose  | /syften  |
-| NMD classes  | /nmdklass  |
+| NMD class  | /nmdklass  |
 
 ## Distributions
 
@@ -55,10 +55,10 @@ See the API [Trails and devices in outdoor life](/data/trails-and-devices-in-out
   
 ### REST API
 
-* [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/nvr_api.json)
-* [Improve this specification](https://github.com/greentechdev/greentechdev.github.io/edit/master/nvr_api.json)
+* [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/nvr_api.yaml)
+* [Improve this specification](https://github.com/greentechdev/greentechdev.github.io/edit/master/nvr_api.yaml)
 
-{{< swagger-ui url="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/nvr_api.json" height="1000" >}}
+{{< swagger-ui url="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/nvr_api.yaml" height="1000" >}}
 
 ## Example usage
 
