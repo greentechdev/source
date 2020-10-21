@@ -54,8 +54,8 @@ The API provides two means of filtering of data: attribute based (using the 'whe
 
 ## Example usage
 
-The example below uses the attribute based filtering. For an example using spatial filtering see [https://developers.arcgis.com/labs/rest/query-a-feature-layer/](https://developers.arcgis.com/labs/rest/query-a-feature-layer/).
+The example below calls the two endpoints and filters out some data from "Stora Mosse" national park. The purpose could be to compare the data from service with OpenStreetMap data. When clicking on the features a popup is shown that displays some additional information for the feature.
 
-TBD
+{{< jsfiddle id="aqmo71s4" color="light" view="result,js,html,css" height="500" >}}
 
-{{< jsfiddle id="aqmo71s4" color="light" view="js,result" height="500" >}}
+This example uses the attribute based filtering. For an example using spatial filtering see [https://developers.arcgis.com/labs/rest/query-a-feature-layer/](https://developers.arcgis.com/labs/rest/query-a-feature-layer/).
