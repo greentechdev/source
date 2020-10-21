@@ -28,14 +28,15 @@ To better understand this data, the following model covers the basic parts:
 | Entity  | Endpoint  |
 |---|---|
 | Site  | /omrade  |
-| Environmental objective  | /miljomal  |
-| Regulation  | /foreskriftstyper and /foreskriftssubtyper  |
-| Purpose  | /syften  |
-| NMD class  | /nmdklass  |
+| Environmental objectives  | /miljomal  |
+| Regulations  | /foreskriftstyper and /foreskriftssubtyper  |
+| Purposes  | /syften  |
+| NMD classes  | /nmdklass  |
 
 ## Distributions
+The OpenApi specification and examples below describe a REST API that exposes the whole data model, but has some limitations in the spatial, e.g. geometries are only available in WKT format and there is no possibility to filter the results spatially. 
 
-Parts of this data (e.g. the "sites" part of the data model) is also exposed though OGC Standard Compliant WMS and WFS services as well as ArcGIS Server REST API. The OpenApi specification and examples below describe a REST API that exposes the whole data model, but has some limitations in the geographical aspects. If your use case requires spatial data we recommend combining this API with either OGC services or the Esri ArcGIS REST API.
+However, a subset of this data is exposed through OGC Standard Compliant WMS and WFS services, as well as ArcGIS Server REST API. If your use case requires spatial operations we recommend combining this API with either OGC services or the Esri ArcGIS REST API.
 
 For more information regarding the data and the OGC services, see [this document](https://gpt.vic-metria.nu/data/land/Leder_och_friluftsanordningar_beskrivning_av_oppna_data.pdf) (Swedish)
 
@@ -47,9 +48,9 @@ The WFS service is available at
 * https://nvpub.vic-metria.nu/arcgis/services/Anordningar_friluftsliv_WFS/MapServer/WFSServer
 * https://nvpub.vic-metria.nu/arcgis/services/Leder_friluftsliv_WFS/MapServer/WFSServer
 
-ArcGIS Server REST API
-
-TBD (description and link)
+The ArcGIS Server REST API is available at
+* https://nvpub.vic-metria.nu/arcgis/rest/services/Naturvardsregistret/MapServer
+* https://nvpub.vic-metria.nu/arcgis/rest/services/Naturvardsregistret_WFS/MapServer 
 
 See the API [Trails and devices in outdoor life](/data/trails-and-devices-in-outdoor-life) for a description, links and example based on the ArcGIS Server REST API.
   
@@ -64,6 +65,6 @@ See the API [Trails and devices in outdoor life](/data/trails-and-devices-in-out
 
 The example below show national parks and when clicking on the features in the map a call is made to the NVR REST API to get information about the national environmental quality objectives.
 
-Geometries for the parks are downloaded from https://gpt.vic-metria.nu/data/land/NP.zip, converted to geojson using QGIS and loaded directly from github for brevity of this examle (this could be achieved in code by calling a WFS or ArcGIS REST API service or by utilizing a getFeatureInfo-request on a WMS layer, see *Distributions* for more information.)
+Geometries for the parks are downloaded from https://gpt.vic-metria.nu/data/land/NP.zip, converted to geojson using QGIS and loaded directly from github for brevity of this example (this could be achieved in code by calling a WFS or ArcGIS REST API service or by utilizing a getFeatureInfo-request on a WMS layer, see *Distributions* for more information.)
 
 {{< jsfiddle id="pj8otq1L" color="light" view="result,js,html,css" height="500" >}}
