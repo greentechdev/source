@@ -1,7 +1,6 @@
 openapi: 3.0.1
-servers: [
-  url: https://nvpub.vic-metria.nu/arcgis/rest/services 
-  ]
+servers:
+  - url: https://nvpub.vic-metria.nu/arcgis/rest/services 
 info:
   title: ArcGIS Server REST API for Outdoor Life
   description: Subset of ArcGIS Server REST API for trails and devices for outdoor life in protected sites.
