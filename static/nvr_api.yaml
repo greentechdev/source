@@ -24,7 +24,7 @@ paths:
       parameters:
         - name: beslutsstatus
           in: path
-          description: Beslutsstatus för ett område
+          description: Decision status for this site
           schema:
             type: string
           required: true
@@ -36,36 +36,18 @@ paths:
           required: true
         - name: nvrId
           in: path
-          description: NVR-id för ett område
+          description: NVR-id for a site
           schema:
             type: string
           required: true
       responses:
         "200":
-          description: Beslutsdokument
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Beslutsdokument"
-              examples:
-                response:
-                  value:
-                    nvrId: ...
-                    beslutsId: ...
-                    beslutsstatus: ...
-                    beslutstyp: ...
-                    beslutsmyndighet: ...
-                    diarienummer: ...
-                    beslutsdatum: 12345
-                    gallandedatum: 12345
-                    id: ...
-                    namn: ...
-                    typ: ...
-                    mimeType: ...
-                    fileUrl: ...
-                    atomLink:
-                      - {}
-                      - {}
+
   "/foreskriftsomrade/{nvrId}/{status}/{objectid}":
     get:
       tags:
@@ -75,13 +57,13 @@ paths:
       parameters:
         - name: beslutsstatus
           in: path
-          description: Beslutsstatus för ett område
+          description: Decision status for this site
           schema:
             type: string
           required: true
         - name: nvrId
           in: path
-          description: NVR-id för ett område
+          description: NVR-id for a site
           schema:
             type: string
           required: true
@@ -94,27 +76,12 @@ paths:
           required: true
       responses:
         "200":
-          description: Foreskriftsomrade
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Foreskriftsomrade"
-              examples:
-                response:
-                  value:
-                    objectId: 12345
-                    nvrId: ...
-                    beslutsstatus: ...
-                    foreskriftstyp: ...
-                    foreskriftssubtyp: ...
-                    franDatum: ...
-                    tillDatum: ...
-                    areaHa: 12345
-                    foreskriftstypKod: ...
-                    foreskriftssubtypKod: ...
-                    atomLink:
-                      - {}
-                      - {}
+
   /foreskriftstyper:
     get:
       tags:
@@ -125,7 +92,7 @@ paths:
       operationId: getForeskrifterList
       responses:
         "200":
-          description: List(Typ)
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -133,11 +100,7 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Typ"
-              examples:
-                response:
-                  value:
-                    - key: ...
-                      value: ...
+
   /foreskriftssubtyper:
     get:
       tags:
@@ -149,7 +112,7 @@ paths:
       operationId: getForeskriftsSubtyperList
       responses:
         "200":
-          description: List(Typ)
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -174,7 +137,7 @@ paths:
       operationId: getMiljomalList
       responses:
         "200":
-          description: List(Typ)
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -182,16 +145,12 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Typ"
-              examples:
-                response:
-                  value:
-                    - key: ...
-                      value: ...
+
   "/miljomal/{nvrId}/{status}/{namn}":
     get:
       tags:
         - Environmental objectives
-      description: Returnerar ett miljömål för ett område.
+      description: Returnerar ett miljömål for a site.
       operationId: get3
       parameters:
         - name: beslutsstatus
@@ -214,20 +173,11 @@ paths:
           required: true
       responses:
         "200":
-          description: Miljomal
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Miljomal"
-              examples:
-                response:
-                  value:
-                    nvrId: ...
-                    beslutsstatus: ...
-                    namn: ...
-                    atomLink:
-                      - {}
-                      - {}
 
   /nmdklass:
     get:
@@ -243,7 +193,7 @@ paths:
       operationId: getNmdKlasser
       responses:
         "200":
-          description: List<Typ>
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -251,11 +201,7 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Typ"
-              examples:
-                response:
-                  value:
-                    - key: ...
-                      value: ...
+
   /nmdklass/niva1:
     get:
       tags:
@@ -271,7 +217,7 @@ paths:
       operationId: getNmdKlasserNiva1List
       responses:
         "200":
-          description: List<Typ>
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -279,11 +225,7 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Typ"
-              examples:
-                response:
-                  value:
-                    - key: ...
-                      value: ...
+
   /nmdklass/niva2:
     get:
       tags:
@@ -299,7 +241,7 @@ paths:
       operationId: getNmdKlasserNiva2List
       responses:
         "200":
-          description: List<Typ>
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -307,11 +249,7 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Typ"
-              examples:
-                response:
-                  value:
-                    - key: ...
-                      value: ...
+
   /nmdklass/niva3:
     get:
       tags:
@@ -327,7 +265,7 @@ paths:
       operationId: getNmdKlasserNiva3List
       responses:
         "200":
-          description: List<Typ>
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -335,11 +273,7 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Typ"
-              examples:
-                response:
-                  value:
-                    - key: ...
-                      value: ...
+
   "/nmdklass/{nvrId}/{status}/{nmdKlassKod}":
     get:
       tags:
@@ -367,24 +301,11 @@ paths:
           required: true
       responses:
         "200":
-          description: NmdKlass
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/NmdKlass"
-              examples:
-                response:
-                  value:
-                    nvrId: ...
-                    beslutsstatus: ...
-                    kod: ...
-                    foreskriftstyp: ...
-                    namn: ...
-                    areaHa: 12345
-                    foreskriftstypNamn: ...
-                    atomLink:
-                      - {}
-                      - {}
 
   /omrade:
     get:
@@ -518,37 +439,15 @@ paths:
             type: string
       responses:
         "200":
-          description: List(Omrade)
+          description: Successful operation
           content:
             application/json:
               schema:
                 description: List(Omrade)
                 type: array
                 items:
-                  $ref: "#/components/schemas/OmradeDto"
-              examples:
-                response:
-                  value:
-                    - id: ...
-                      beslutsstatus: ...
-                      namn: ...
-                      skyddstyp: ...
-                      lanAsText: ...
-                      kommunerAsText: ...
-                      beslutstyp: ...
-                      beslutsdatum: 12345
-                      ursprBeslutsdatum: 12345
-                      gallandedatum: 12345
-                      iucnKategori: ...
-                      forvaltare: ...
-                      areaHa: 12345
-                      landareaHa: 12345
-                      vattenareaHa: 12345
-                      skogAreaHa: 12345
-                      beslutsmyndighet: ...
-                      atomLink:
-                        - {}
-                        - {}
+                  $ref: "#/components/schemas/Omrade"
+
   /omrade/beslutsmyndigheter:
     get:
       tags:
@@ -558,7 +457,7 @@ paths:
       operationId: getBeslutsmyndighetList
       responses:
         "200":
-          description: List(Typ)
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -566,11 +465,7 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Typ"
-              examples:
-                response:
-                  value:
-                    - key: ...
-                      value: ...
+
   /omrade/beslutsstatusar:
     get:
       tags:
@@ -580,7 +475,7 @@ paths:
       operationId: getBeslutsstatusList
       responses:
         "200":
-          description: List(Typ)
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -588,11 +483,7 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Typ"
-              examples:
-                response:
-                  value:
-                    - key: ...
-                      value: ...
+
   /omrade/extentAsWkt:
     get:
       tags:
@@ -615,12 +506,13 @@ paths:
               type: string
       responses:
         "200":
-          description: String
+          description: Successful operation
           content:
             text/plain;charset=utf-8:
               schema:
-                description: String
+                description: The extent of the site as WKT
                 type: string
+
   /omrade/nolinks:
     get:
       tags:
@@ -755,37 +647,15 @@ paths:
             type: string
       responses:
         "200":
-          description: List(Omrade)
+          description: Successful operation
           content:
             application/json:
               schema:
                 description: List(Omrade)
                 type: array
                 items:
-                  $ref: "#/components/schemas/OmradeDto"
-              examples:
-                response:
-                  value:
-                    - id: ...
-                      beslutsstatus: ...
-                      namn: ...
-                      skyddstyp: ...
-                      lanAsText: ...
-                      kommunerAsText: ...
-                      beslutstyp: ...
-                      beslutsdatum: 12345
-                      ursprBeslutsdatum: 12345
-                      gallandedatum: 12345
-                      iucnKategori: ...
-                      forvaltare: ...
-                      areaHa: 12345
-                      landareaHa: 12345
-                      vattenareaHa: 12345
-                      skogAreaHa: 12345
-                      beslutsmyndighet: ...
-                      atomLink:
-                        - {}
-                        - {}
+                  $ref: "#/components/schemas/Omrade"
+
   /omrade/skyddstyper:
     get:
       tags:
@@ -797,7 +667,7 @@ paths:
       operationId: getSkyddstyperList
       responses:
         "200":
-          description: List(Typ)
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -805,11 +675,7 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Typ"
-              examples:
-                response:
-                  value:
-                    - key: ...
-                      value: ...
+
   "/omrade/{id}/{status}":
     get:
       tags:
@@ -831,34 +697,12 @@ paths:
           required: true
       responses:
         "200":
-          description: Omrade
+          description: Successful operation
           content:
             application/json:
               schema:
-                $ref: "#/components/schemas/OmradeDto"
-              examples:
-                response:
-                  value:
-                    id: ...
-                    beslutsstatus: ...
-                    namn: ...
-                    skyddstyp: ...
-                    lanAsText: ...
-                    kommunerAsText: ...
-                    beslutstyp: ...
-                    beslutsdatum: 12345
-                    ursprBeslutsdatum: 12345
-                    gallandedatum: 12345
-                    iucnKategori: ...
-                    forvaltare: ...
-                    areaHa: 12345
-                    landareaHa: 12345
-                    vattenareaHa: 12345
-                    skogAreaHa: 12345
-                    beslutsmyndighet: ...
-                    atomLink:
-                      - {}
-                      - {}
+                $ref: "#/components/schemas/Omrade"
+
   "/omrade/{id}/{status}/beslutsdokument":
     get:
       tags:
@@ -868,19 +712,19 @@ paths:
       parameters:
         - name: beslutsstatus
           in: path
-          description: Beslutsstatus för ett område,
+          description: Decision status for this site,
           schema:
             type: string
           required: true
         - name: id
           in: path
-          description: NVR-id för ett område,
+          description: NVR-id for a site,
           schema:
             type: string
           required: true
       responses:
         "200":
-          description: List(Beslutsdokument)
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -888,30 +732,12 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Beslutsdokument"
-              examples:
-                response:
-                  value:
-                    - nvrId: ...
-                      beslutsId: ...
-                      beslutsstatus: ...
-                      beslutstyp: ...
-                      beslutsmyndighet: ...
-                      diarienummer: ...
-                      beslutsdatum: 12345
-                      gallandedatum: 12345
-                      id: ...
-                      namn: ...
-                      typ: ...
-                      mimeType: ...
-                      fileUrl: ...
-                      atomLink:
-                        - {}
-                        - {}
+
   "/omrade/{id}/{status}/extentAsWkt":
     get:
       tags:
         - Sites
-      description: Returnerar extent (som wkt) för geometrin för ett område.
+      description: Returnerar extent (som wkt) för geometrin for a site.
       operationId: extentAsWkt
       parameters:
         - name: beslutsstatus
@@ -928,12 +754,13 @@ paths:
           required: true
       responses:
         "200":
-          description: String
+          description: Successful operation
           content:
             text/plain;charset=utf-8:
               schema:
-                description: String
+                description: The extent of the site as WKT
                 type: string
+
   "/omrade/{id}/{status}/foreskriftsomraden":
     get:
       tags:
@@ -943,19 +770,19 @@ paths:
       parameters:
         - name: beslutsstatus
           in: path
-          description: Beslutsstatus för ett område,
+          description: Decision status for this site,
           schema:
             type: string
           required: true
         - name: id
           in: path
-          description: NVR-id för ett område,
+          description: NVR-id for a site,
           schema:
             type: string
           required: true
       responses:
         "200":
-          description: List(Syfte)
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -963,22 +790,7 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Foreskriftsomrade"
-              examples:
-                response:
-                  value:
-                    - objectId: 12345
-                      nvrId: ...
-                      beslutsstatus: ...
-                      foreskriftstyp: ...
-                      foreskriftssubtyp: ...
-                      franDatum: ...
-                      tillDatum: ...
-                      areaHa: 12345
-                      foreskriftstypKod: ...
-                      foreskriftssubtypKod: ...
-                      atomLink:
-                        - {}
-                        - {}
+
   "/omrade/{id}/{status}/miljomal":
     get:
       tags:
@@ -988,7 +800,7 @@ paths:
       parameters:
         - name: beslutsstatus
           in: path
-          description: Beslutsstatus för ett område,
+          description: Decision status for this site,
           schema:
             type: string
           required: true
@@ -1000,7 +812,7 @@ paths:
           required: true
       responses:
         "200":
-          description: List(Syfte)
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -1008,15 +820,7 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Miljomal"
-              examples:
-                response:
-                  value:
-                    - nvrId: ...
-                      beslutsstatus: ...
-                      namn: ...
-                      atomLink:
-                        - {}
-                        - {}
+
   "/omrade/{id}/{status}/nmdklasser":
     get:
       tags:
@@ -1027,19 +831,19 @@ paths:
       parameters:
         - name: beslutsstatus
           in: path
-          description: Beslutsstatus för ett område,
+          description: Decision status for this site,
           schema:
             type: string
           required: true
         - name: id
           in: path
-          description: NVR-id för ett område,
+          description: NVR-id for a site,
           schema:
             type: string
           required: true
       responses:
         "200":
-          description: List(NmdKlass)
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -1047,19 +851,7 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/NmdKlass"
-              examples:
-                response:
-                  value:
-                    - nvrId: ...
-                      beslutsstatus: ...
-                      kod: ...
-                      foreskriftstyp: ...
-                      namn: ...
-                      areaHa: 12345
-                      foreskriftstypNamn: ...
-                      atomLink:
-                        - {}
-                        - {}
+
   "/omrade/{id}/{status}/syften":
     get:
       tags:
@@ -1069,19 +861,19 @@ paths:
       parameters:
         - name: beslutsstatus
           in: path
-          description: Beslutsstatus för ett område,
+          description: Decision status for this site,
           schema:
             type: string
           required: true
         - name: id
           in: path
-          description: NVR-id för ett område,
+          description: NVR-id for a site,
           schema:
             type: string
           required: true
       responses:
         "200":
-          description: List(Syfte)
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -1089,22 +881,12 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Syfte"
-              examples:
-                response:
-                  value:
-                    - nvrId: ...
-                      beslutsstatus: ...
-                      id: ...
-                      namn: ...
-                      beskrivning: ...
-                      atomLink:
-                        - {}
-                        - {}
+
   "/omrade/{id}/{status}/wkt":
     get:
       tags:
         - Sites
-      description: Returnerar geometri (som wkt) för ett område.
+      description: Returnerar geometri (som wkt) for a site.
       operationId: wkt
       parameters:
         - name: beslutsstatus
@@ -1121,12 +903,13 @@ paths:
           required: true
       responses:
         "200":
-          description: String
+          description: Successful operation
           content:
             text/plain;charset=utf-8:
               schema:
-                description: String
+                description: WKT string
                 type: string
+
   "/syfte/{nvrId}/{status}/{id}":
     get:
       tags:
@@ -1136,7 +919,7 @@ paths:
       parameters:
         - name: beslutsstatus
           in: path
-          description: Beslutsstatus för ett område
+          description: Decision status for this site
           schema:
             type: string
           required: true
@@ -1148,28 +931,17 @@ paths:
           required: true
         - name: nvrId
           in: path
-          description: NVR-id för ett område.
+          description: NVR-id for a site.
           schema:
             type: string
           required: true
       responses:
         "200":
-          description: Syfte
+          description: Successful operation
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/Syfte"
-              examples:
-                response:
-                  value:
-                    nvrId: ...
-                    beslutsstatus: ...
-                    id: ...
-                    namn: ...
-                    beskrivning: ...
-                    atomLink:
-                      - {}
-                      - {}
 
   /syften:
     get:
@@ -1181,7 +953,7 @@ paths:
       operationId: getSyftenList
       responses:
         "200":
-          description: List(Typ)
+          description: Successful operation
           content:
             application/json:
               schema:
@@ -1189,17 +961,12 @@ paths:
                 type: array
                 items:
                   $ref: "#/components/schemas/Typ"
-              examples:
-                response:
-                  value:
-                    - key: ...
-                      value: ...
 
 components:
   schemas:
     Beslutsdokument:
       type: object
-      title: Beslutsdokument
+      title: Decision document
       properties:
         nvrId:
           readOnly: false
@@ -1279,9 +1046,10 @@ components:
           - {}
           - {}
       description: ""
+
     Foreskriftsomrade:
       type: object
-      title: Foreskriftsomrade
+      title: Regulation area
       properties:
         objectId:
           readOnly: false
@@ -1345,9 +1113,10 @@ components:
           - {}
           - {}
       description: ""
+
     Miljomal:
       type: object
-      title: Miljomal
+      title: Environmental objective
       properties:
         nvrId:
           readOnly: false
@@ -1375,9 +1144,10 @@ components:
           - {}
           - {}
       description: ""
+
     NmdKlass:
       type: object
-      title: NmdKlass
+      title: NMD class
       properties:
         nvrId:
           readOnly: false
@@ -1425,9 +1195,10 @@ components:
           - {}
           - {}
       description: ""
-    OmradeDto:
+
+    Omrade:
       type: object
-      title: Omrade
+      title: Site
       properties:
         id:
           readOnly: false
@@ -1528,9 +1299,10 @@ components:
           - {}
           - {}
       description: ""
+
     Syfte:
       type: object
-      title: Syfte
+      title: Purpose
       properties:
         nvrId:
           readOnly: false
@@ -1568,9 +1340,10 @@ components:
           - {}
           - {}
       description: ""
+
     Typ:
       type: object
-      title: Typ
+      title: Type
       properties:
         key:
           readOnly: false
