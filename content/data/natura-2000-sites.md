@@ -37,10 +37,10 @@ The data is made available via a HTTP/REST API.
 
 ### REST API
 
-* [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/n2000_api.json)
-* [Improve this specification](https://github.com/greentechdev/greentechdev.github.io/edit/master/n2000_api.json)
+* [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/n2000_api.yaml)
+* [Improve this specification](https://github.com/greentechdev/greentechdev.github.io/edit/master/n2000_api.yaml)
 
-{{< swagger-ui url="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/n2000_api.json" height="1000" >}}
+{{< swagger-ui url="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/n2000_api.yaml" height="1000" >}}
 
 ## Example usage
 
