@@ -24,9 +24,11 @@ The current data model is very basic. There is ongoing work intending to refine 
 
 ## Distributions
 
-This data is exposed though OGC Standard Compliant WMS and WFS services as well as ArcGIS Server REST API. The OpenApi specification and examples below use the ArcGIS Server REST API. (Even though the URL includes "WFS" it is not a WFS service.)
+This data is exposed though OGC Standard Compliant WMS and WFS services as well as ArcGIS REST API. The OpenApi specification and examples below use the ArcGIS REST API. (Even though the URL includes "WFS" it is not a WFS service.)
 
-For more information regarding the OGC services, see [this document](https://gpt.vic-metria.nu/data/land/Leder_och_friluftsanordningar_beskrivning_av_oppna_data.pdf) (Swedish)
+For more information regarding the OGC services and the data, see [this document](https://gpt.vic-metria.nu/data/land/Leder_och_friluftsanordningar_beskrivning_av_oppna_data.pdf) (Swedish).
+
+### WMS and WFS services
 
 The WMS service is available at 
 * https://nvpub.vic-metria.nu/arcgis/services/Anordningar_friluftsliv/MapServer/WMSServer
@@ -36,9 +38,9 @@ The WFS service is available at
 * https://nvpub.vic-metria.nu/arcgis/services/Anordningar_friluftsliv_WFS/MapServer/WFSServer
 * https://nvpub.vic-metria.nu/arcgis/services/Leder_friluftsliv_WFS/MapServer/WFSServer
 
-### REST API
+### ArcGIS REST API
 
-The OpenApi specification below describes two endpoints from the ArcGIS Server REST API that can be called to retrieve data for devices (anordningar) and trails (leder) from the service.
+The OpenApi specification below describes two endpoints from the ArcGIS REST API that can be called to retrieve data for devices (anordningar) and trails (leder) from the service.
 
 For the complete documentation of this API, please refer to
 https://developers.arcgis.com/rest/services-reference/query-feature-service-layer-.htm
