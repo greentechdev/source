@@ -26,6 +26,7 @@ paths:
                   $ref: "#/components/schemas/Species"
         default:
           $ref: "#/components/responses/GeneralError"
+
   "/arter/{grupp}":
     get:
       tags:
@@ -51,11 +52,12 @@ paths:
                   $ref: "#/components/schemas/SpeciesFiltered"
         default:
           $ref: "#/components/responses/GeneralError"
+
   /artgrupper:
     get:
       tags:
         - Supporting data
-      summary: All species groups within the N2000 sites.
+      summary: All species groups within the N2000 sites
       operationId: getArtGruppList
       responses:
         "200":
@@ -68,6 +70,7 @@ paths:
                   $ref: "#/components/schemas/SpeciesGroup"
         default:
           $ref: "#/components/responses/GeneralError"
+
   /naturtyper:
     get:
       tags:
@@ -85,6 +88,7 @@ paths:
                   $ref: "#/components/schemas/GeneralType"
         default:
           $ref: "#/components/responses/GeneralError"
+
   "/dokument/{kod}/{id}":
     get:
       tags:
@@ -116,6 +120,7 @@ paths:
                   $ref: "#/components/schemas/Document"
         default:
           $ref: "#/components/responses/GeneralError"
+
   /omrade:
     get:
       tags:
@@ -193,6 +198,7 @@ paths:
                   $ref: "#/components/schemas/N2000Site"
         default:
           $ref: "#/components/responses/GeneralError"
+
   /omrade/nolinks:
     get:
       tags:
@@ -272,6 +278,7 @@ paths:
                   $ref: "#/components/schemas/N2000SiteNoLinks"
         default:
           $ref: "#/components/responses/GeneralError"
+
   /omrade/extentAsWkt:
     get:
       tags:
@@ -279,7 +286,7 @@ paths:
       summary: Combined geographical extent of one or more N2000 sites
       description: Note that the response is in
         [WKT](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry)
-        format, encoded as [SWEREF99 / EPSG:3006](https://epsg.io/3006).
+        format, encoded as [SWEREF99 TM / EPSG:3006](https://epsg.io/3006).
       operationId: omrade_extentAsWkt
       parameters:
         - name: id
@@ -296,11 +303,12 @@ paths:
         "200":
           description: Successful operation
           content:
-            application/json:
+            text/plain;charset=utf-8:
               schema:
                 $ref: "#/components/schemas/WktString"
         default:
           $ref: "#/components/responses/GeneralError"
+
   /omrade/omradestyper:
     get:
       tags:
@@ -316,6 +324,7 @@ paths:
                 $ref: "#/components/schemas/GeneralType"
         default:
           $ref: "#/components/responses/GeneralError"
+
   "/omrade/{id}":
     get:
       tags:
@@ -334,11 +343,12 @@ paths:
         "200":
           description: Successful operation
           content:
-            application/json:
+            text/plain;charset=utf-8:
               schema:
                 $ref: "#/components/schemas/N2000SiteExtended"
         default:
           $ref: "#/components/responses/GeneralError"
+
   "/omrade/{id}/extentAsWkt":
     get:
       tags:
@@ -346,7 +356,7 @@ paths:
       summary: Geographical extent of the N2000 site
       description: Note that the response is in
         [WKT](https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry)
-        format, encoded as [SWEREF99 / EPSG:3006](https://epsg.io/3006).
+        format, encoded as [SWEREF99 TM / EPSG:3006](https://epsg.io/3006).
       operationId: omrade_id_extentAsWkt
       parameters:
         - name: id
@@ -359,16 +369,17 @@ paths:
         "200":
           description: Successful operation
           content:
-            application/json:
+            text/plain;charset=utf-8:
               schema:
                 $ref: "#/components/schemas/WktString"
         default:
           $ref: "#/components/responses/GeneralError"
+
   "/omrade/{id}/wkt":
     get:
       tags:
         - N2000 sites
-      summary: Geographical representation of the N2000 site.
+      summary: Geographical representation of the N2000 site
       operationId: omrade_id_wkt
       parameters:
         - name: id
@@ -381,11 +392,12 @@ paths:
         "200":
           description: Successful operation
           content:
-            application/json:
+            text/plain;charset=utf-8:
               schema:
                 $ref: "#/components/schemas/WktString"
         default:
           $ref: "#/components/responses/GeneralError"
+
   "/omrade/{id}/dokument":
     get:
       tags:
@@ -410,6 +422,7 @@ paths:
                   $ref: "#/components/schemas/Document"
         default:
           $ref: "#/components/responses/GeneralError"
+
   "/omrade/{id}/arter":
     get:
       tags:
@@ -434,6 +447,7 @@ paths:
                   $ref: "#/components/schemas/SpeciesInSite"
         default:
           $ref: "#/components/responses/GeneralError"
+
   "/omrade/{id}/naturtyper":
     get:
       tags:
@@ -458,6 +472,7 @@ paths:
                   $ref: "#/components/schemas/NatureType"
         default:
           $ref: "#/components/responses/GeneralError"
+
 components:
   schemas:
     NatureType:
@@ -479,6 +494,7 @@ components:
               type: number
               format: float
               description: Extent in hectares
+
     SpeciesInSite:
       properties:
         art:
@@ -493,6 +509,7 @@ components:
             omradesKod:
               type: string
               description: Site code
+
     Species:
       properties:
         extendedTyp:
@@ -507,18 +524,22 @@ components:
             group:
               type: string
               description: Species group
+
     SpeciesFiltered:
       properties:
         typ:
           $ref: "#/components/schemas/KeyValueType"
+
     SpeciesGroup:
       properties:
         typ:
           $ref: "#/components/schemas/KeyValueType"
+
     GeneralType:
       properties:
         typ:
           $ref: "#/components/schemas/KeyValueType"
+
     KeyValueType:
       properties:
         key:
@@ -527,6 +548,7 @@ components:
         value:
           type: string
           description: Name
+
     Document:
       properties:
         dokument:
@@ -553,6 +575,7 @@ components:
             typ:
               type: string
               description: The type of document, e.g. a maintainance plan
+
     N2000Site:
       properties:
         omrade:
@@ -580,6 +603,7 @@ components:
               type: array
               items:
                 $ref: "#/components/schemas/Link"
+
     N2000SiteExtended:
       properties:
         omrade:
@@ -640,6 +664,7 @@ components:
               type: array
               items:
                 $ref: "#/components/schemas/Link"
+
     N2000SiteNoLinks:
       properties:
         omrade:
@@ -663,6 +688,7 @@ components:
               description: Region name
             omradesTyp:
               $ref: "#/components/schemas/KeyValueType"
+
     Link:
       properties:
         "@rel":
@@ -672,12 +698,14 @@ components:
         "@href":
           type: string
           description: Link URL
+
     WktString:
       type: string
-      description: Geometry in WKT-format with the SWEREF99/EPSG:3006 coordinate system.
+      description: Geometry in WKT-format with the SWEREF99 TM (EPSG:3006) coordinate system.
       example: POLYGON  (( 494297.08800000 6997007.55500000, 581252.96300000
         6997007.55500000, 581252.96300000 7100945.65200000, 494297.08800000
         7100945.65200000, 494297.08800000 6997007.55500000))
+
     Error:
       properties:
         code:
@@ -687,6 +715,7 @@ components:
           type: string
         fields:
           type: string
+
   responses:
     GeneralError:
       description: Unexpected error
