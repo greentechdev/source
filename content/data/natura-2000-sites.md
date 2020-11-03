@@ -53,6 +53,7 @@ The ArcGIS REST API is available at
 * https://nvpub.vic-metria.nu/arcgis/rest/services/N2000_WFS/MapServer 
 
 See the API [Trails and devices in outdoor life](/data/trails-and-devices-in-outdoor-life) for a description, links and example based on the ArcGIS REST API.
+
 ### REST API
 
 * [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/n2000_api.yaml)
