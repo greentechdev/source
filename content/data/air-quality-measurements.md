@@ -36,10 +36,10 @@ The data is made available via a HTTP/REST API.
 
 ### REST API
 
-* [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/air_quality_api.json)
-* [Improve this specification](https://github.com/greentechdev/greentechdev.github.io/edit/master/air_quality_api.json)
+* [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/air_quality_api.yaml)
+* [Improve this specification](https://github.com/greentechdev/greentechdev.github.io/edit/master/air_quality_api.yaml)
 
-{{< swagger-ui url="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/air_quality_api.json" height="1000" >}}
+{{< swagger-ui url="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/air_quality_api.yaml" height="1000" >}}
 
 ## Example usage
 
