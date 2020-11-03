@@ -35,6 +35,8 @@ To better understand this data, the following model covers the basic parts:
 
 The data is made available via a HTTP/REST API.
 
+TODO: describe WFS, WMS, ArcGIS REST API
+
 ### REST API
 
 * [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/n2000_api.yaml)
