@@ -28,15 +28,31 @@ To better understand this data, the following model covers the basic parts:
 
 * Site - the geographical area being protected 
 * Species - rare species in the site causing it to be protected
+* Species groups - groups of rare species
 * Nature types - rare nature types in the site causing it to be protected
 * Documents - mainly maintainance plans for the site
 
 ## Distributions
 
-The data is made available via a HTTP/REST API.
+The OpenApi specification and examples below describe a REST API that exposes the whole data model, but has some limitations in the spatial, e.g. geometries are only available in WKT format and there is no possibility to filter the results spatially. 
 
-TODO: describe WFS, WMS, ArcGIS REST API
+However, a subset of this data is exposed through OGC Standard Compliant WMS and WFS services, as well as ArcGIS REST API. If your use case requires spatial operations we recommend combining this API with either OGC services or the Esri ArcGIS REST API.
 
+### WMS and WFS services
+
+For more information regarding the data and the OGC services, see [this document](https://gpt.vic-metria.nu/data/land/Naturvardsregistret_beskrivning_av_oppna_data.pdf) (Swedish).
+
+The WMS service is available at
+* https://nvpub.vic-metria.nu/arcgis/services/N2000/MapServer/WMSServer
+
+The WFS service is available at
+* https://nvpub.vic-metria.nu/arcgis/services/N2000_WFS/MapServer/WFSServer
+
+The ArcGIS REST API is available at
+* https://nvpub.vic-metria.nu/arcgis/rest/services/N2000/MapServer
+* https://nvpub.vic-metria.nu/arcgis/rest/services/N2000_WFS/MapServer 
+
+See the API [Trails and devices in outdoor life](/data/trails-and-devices-in-outdoor-life) for a description, links and example based on the ArcGIS REST API.
 ### REST API
 
 * [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/n2000_api.yaml)
