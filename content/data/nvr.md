@@ -8,11 +8,15 @@ Draft: false
 
 # NVR
 
-Data from the official list of protected nature sites in Sweden (Naturvårdsregistret, NVR) is exposed through a number of distribution channels. There are 
+Data from the official list of protected nature areas (sites) in Sweden (Naturvårdsregistret, NVR) is exposed through a number of distribution channels. 
 
-http://www.swedishepa.se/Enjoying-nature/Protected-areas/
+Read more about protected nature areas:
 
-TODO: more text/links here
+ * http://www.swedishepa.se/Enjoying-nature/Protected-areas/
+ * http://www.naturvardsverket.se/Var-natur/Skyddad-natur/ (Swedish)
+ * http://www.naturvardsverket.se/Sa-mar-miljon/Kartor/Kartverktyget-Skyddad-natur/ (Swedish)
+
+TBD more text/links here
 
 ## License & conditions
 
@@ -66,9 +70,9 @@ See the API [Trails and devices in outdoor life](/data/trails-and-devices-in-out
 
 ## Example usage
 
-The example below show national parks and when clicking on the features in the map a call is made to the NVR REST API to get information about the national environmental quality objectives.
+The example below shows the outlines of national parks on a map of Sweden. After clicking on the features in the map a call is made to the NVR REST API to get information about the national environmental quality objectives for the national park.
 
-Geometries for the parks are downloaded from https://gpt.vic-metria.nu/data/land/NP.zip, converted to geojson using QGIS and loaded directly from github for brevity of this example (this could be achieved in code by calling a WFS or ArcGIS REST API service or by utilizing a getFeatureInfo-request on a WMS layer, see *Distributions* for more information.)
+Geometries for the parks are downloaded from https://gpt.vic-metria.nu/data/land/NP.zip, converted to geojson using QGIS and loaded directly from github for brevity of this example (the same could be achieved in code by calling a WFS or ArcGIS REST API service or by utilizing a getFeatureInfo-request on a WMS layer, see *Distributions* for more information.)
 
 {{< jsfiddle id="pj8otq1L" color="light" view="result,js,html,css" height="500" >}}
 
