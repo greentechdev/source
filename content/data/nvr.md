@@ -6,7 +6,7 @@ Tags: ["API", "GEO"]
 Draft: false
 ---
 
-# NVR
+# Naturvårdsregistret (NVR)
 
 Data from the official list of protected nature areas (sites) in Sweden (Naturvårdsregistret, NVR) is exposed through a number of distribution channels. 
 
