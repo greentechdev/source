@@ -2,7 +2,7 @@
 Title: "Environmental monitoring stations"
 Description: "Data about the national environmental monitoring stations"
 Tags: ["sites", "geo"]
-Draft: false
+Draft: true
 ---
 
 # Environmental monitoring stations
