@@ -698,7 +698,6 @@ paths:
             type: integer
             format: int64
           required: true
-          example: 2496389
       responses:
         "200":
           description: Successful operation
