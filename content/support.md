@@ -7,6 +7,6 @@ Draft: false
 
 # Support
 
-TBD Contact us at _data [at] naturvardsverket.se_ and we'll try our best to help you with questions relating to the data and the APIs.
+Please use [GitHub issues on GreenTechDev source repo](https://github.com/greentechdev/source/issues) and we'll try our best to help you with questions relating to the data and the APIs.
 
-Please note that we can only provide help around the data and APIs in general, not for issues with your code when using the data and APIs.
+Note that we can only provide help around the data and APIs in general, not for issues with your code when using the data and APIs.
