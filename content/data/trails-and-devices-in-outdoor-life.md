@@ -8,7 +8,15 @@ Draft: false
 
 # Trails and devices in outdoor life
 
-Trails and devices (e.g. toilets, parking lots) in national parks or other nature areas... TBD
+Trails and devices (e.g. toilets, parking lots) in national parks or other nature areas.
+
+## Data quality
+
+See the Swedish EPA's metadata catalogue for details: [Friluftsliv: Leder och anordningar i skyddade områden](https://metadatakatalogen.naturvardsverket.se/metadatakatalogen/GetMetaDataById?id=af2e37d3-45b0-4623-bcf2-0765c8ca7ab5) (Swedish).
+
+## License & conditions 
+
+{{< license-cc0 >}}
 
 ## License & conditions
 

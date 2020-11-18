@@ -16,13 +16,13 @@ Read more about protected nature areas:
  * http://www.naturvardsverket.se/Var-natur/Skyddad-natur/ (Swedish)
  * http://www.naturvardsverket.se/Sa-mar-miljon/Kartor/Kartverktyget-Skyddad-natur/ (Swedish)
 
-TBD more text/links here
+## Data quality
 
-## License & conditions
+See the Swedish EPA's metadata catalogue for details: [Öppna tjänster för data i naturvårdsregistret](https://metadatakatalogen.naturvardsverket.se/metadatakatalogen/GetMetaDataById?id=50FE77C1-43A0-445A-B56C-6B729E21DC67) (Swedish).
 
-The data is licensed under [Creative Commons Zero, CC0](https://creativecommons.org/publicdomain/zero/1.0/).
+## License & conditions 
 
-Our APIs and data are provided "as is" without guarantees concerning potential errors in the data, availability and performance of the API and similar.  We reserve the right to block individual IP addresses or, alternatively, to completely shut down services in the event of obvious abuse.
+{{< license-cc0 >}}
 
 ## Data model
 

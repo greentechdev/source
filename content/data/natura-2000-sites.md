@@ -6,7 +6,7 @@ Tags: ["sites"]
 Draft: false
 ---
 
-# {{< param Title >}}
+# Natura 2000 sites
 
 The Swedish sites as part of the EU-wide Natura 2000 network of protected sites for rare species or habitat types (e.g. special types of forest or grasslands). The sites can be both terrestrial and marine protected areas.
 
@@ -14,7 +14,7 @@ European Commission on [Natura 2000](https://ec.europa.eu/environment/nature/nat
 
 ## Data quality
 
-No information.
+See the Swedish EPA's metadata catalogue for details: [Natura 2000 SCI/SAC](https://metadatakatalogen.naturvardsverket.se/metadatakatalogen/GetMetaDataById?id=945e918f-8426-4155-8fd6-3f780a85dd8f) and [Natura 2000 SPA](https://metadatakatalogen.naturvardsverket.se/metadatakatalogen/GetMetaDataById?id=a80bf3d7-e70c-42d1-9b8d-8148e53e011d) (Swedish).
 
 ## License & conditions 
 
