@@ -49,7 +49,7 @@ See the following example for an illustration of how to use the API and data. It
 
 Say we're looking to chart the levels of NO2 (nitrogen dioxide) at Hornsgatan, Stockholm for the last 24 hours and compare it to the the threshold value from the [environmental quality standards](https://www.naturvardsverket.se/Stod-i-miljoarbetet/Vagledningar/Luft-och-klimat/Miljokvalitetsnormer-for-utomhusluft/Gransvarden-malvarden-utvarderingstrosklar/). Something like
 
-{{< jsfiddle id="0dax5c3L" rev="latest" color="light" view="result" height="380" >}}
+{{< jsfiddle id="0dax5c3L" color="light" view="result" height="380" >}}
 
 So in three simple steps:
 
