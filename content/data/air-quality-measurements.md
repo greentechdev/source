@@ -49,7 +49,7 @@ See the following example for an illustration of how to use the API and data. It
 
 Say we're looking to chart the levels of NO2 (nitrogen dioxide) at Hornsgatan, Stockholm for the last 24 hours and compare it to the the threshold value from the [environmental quality standards](https://www.naturvardsverket.se/Stod-i-miljoarbetet/Vagledningar/Luft-och-klimat/Miljokvalitetsnormer-for-utomhusluft/Gransvarden-malvarden-utvarderingstrosklar/). Something like
 
-{{< jsfiddle id="0dax5c3L" rev="4" color="light" view="result" height="380" >}}
+{{< jsfiddle id="0dax5c3L" rev="latest" color="light" view="result" height="380" >}}
 
 So in three simple steps:
 
@@ -57,7 +57,7 @@ So in three simple steps:
 
     ```js
     //make a search query for our term NO2
-    fetch("https://shair.smhi.se/52North/api/v1/search?q=NO2")
+    fetch("https://datavardluft.smhi.se/52North/api/v1/search?q=NO2")
       .then(response => response.json())
       .then(data => document.getElementById("results").innerHTML = JSON.stringify(data, null, 2));
     ```
@@ -78,7 +78,7 @@ So in three simple steps:
 
     ```js
     //URL to find stations filtered by our phenomenon ID 
-    var url = "https://shair.smhi.se/52North/api/v1/stations/?phenomena=8";
+    var url = "https://datavardluft.smhi.se/52North/api/v1/stations/?phenomena=8";
     
     //Using the "near"-parameter in the API to filter the list of stations by closeness to a point on a map we pick 
     var nearFilter = {
@@ -118,7 +118,7 @@ So in three simple steps:
 1) Using the Timeseries-resource to get our measurment data
     ```js
     //With our phenomenon- and station ID - see what timeseries there are  
-    fetch("https://shair.smhi.se/52North/api/v1/timeseries/?phenomena=8&station=115")
+    fetch("https://datavardluft.smhi.se/52North/api/v1/timeseries/?phenomena=8&station=115")
       .then(response => response.json())
       .then(data => document.getElementById("results").innerHTML = JSON.stringify(data, null, 2));
     ```
@@ -141,7 +141,7 @@ So in three simple steps:
     fromDate.setDate(toDate.getDate() - 1);
 
     //Create URL for our timeseries and with the create timespan dates
-    var url = "https://shair.smhi.se/52North/api/v1/timeseries/59/getData?timespan=" + fromDate.toISOString() + "/" + toDate.toISOString();
+    var url = "https://datavardluft.smhi.se/52North/api/v1/timeseries/59/getData?timespan=" + fromDate.toISOString() + "/" + toDate.toISOString();
 
     //Get the data
     fetch(url)
