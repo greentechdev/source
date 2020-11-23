@@ -4,4 +4,4 @@ Description: "A list of environmental data publicly available and free to use in
 Draft: false
 ---
 
-TBD Greentechdev is a initiative by the Swedish EPA to provide easy to use open data in the environmental domain. Here are the APIs and prepackaged data files we have made available so far. If you feel something is missing - please [contact]({{< ref "support.md" >}}) us to let us know! 
+TBD Greentechdev is a initiative by the Swedish Environmental Protection Agency to provide easy to use open data in the environmental domain. Here are the APIs and prepackaged data files we have made available so far. If you feel something is missing - please [contact]({{< ref "support.md" >}}) us to let us know! 
