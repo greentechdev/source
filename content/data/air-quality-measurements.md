@@ -1,13 +1,15 @@
 ---
 Title: "Air quality measurements"
-Description: "Near real-time national air quality data from measuring stations - the air quality data provides information on the levels of various air pollutants, including particles, nitrogen dioxide and ground-level ozone, in Swedish cities and in rural areas. The data is made available via a HTTP/REST API with various usage examples."
+Description: "Near real-time national air quality data from measuring stations - the air quality data provides information on the levels of various air pollutants, including particles, nitrogen dioxide and ground-level ozone, in Swedish cities and in rural areas."
 Tags: ["air","geo"]
 Draft: false
 ---
 
 # Air quality measurements
 
-{{< param Description >}} The data is provided in cooperation with [SMHI](https://smhi.se).
+Near real-time national air quality data from measuring stations - the air quality data provides information on the levels of various air pollutants, including particles, nitrogen dioxide and ground-level ozone, in Swedish cities and in rural areas. The data is made available via a HTTP/REST API with various usage examples.
+
+The data is provided in cooperation with [SMHI](https://smhi.se).
 
 See [Luftkvaliteten i realtid och preliminär statistik](https://www.naturvardsverket.se/Sa-mar-miljon/Klimat-och-luft/Statistik-om-luft/Luftkvaliteten-i-realtid/) for more information (Swedish).
 
