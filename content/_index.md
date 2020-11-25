@@ -4,4 +4,4 @@ Description: "A list of environmental data publicly available and free to use in
 Draft: false
 ---
 
-TBD Greentechdev is a initiative by the Swedish Environmental Protection Agency to provide easy to use open data in the environmental domain. Here are the APIs and prepackaged data files we have made available so far. If you feel something is missing - please [contact]({{< ref "support.md" >}}) us to let us know! 
+GreenTechDev is an explorative test platform for usability tests created by the Swedish Environmental Protection Agency. The purpose is to develop easy-to-use open data in the environmental domain. Following are the API:s and prepackaged data files that are made available in this test. Don’t hesitate to [contact]({{< ref "support.md" >}}) us, for things missing, suggestions and alterations!
