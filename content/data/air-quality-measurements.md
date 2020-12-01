@@ -15,7 +15,7 @@ See [Luftkvaliteten i realtid och preliminär statistik](https://www.naturvardsv
 
 ## Data quality
 
-No information.
+Real-time data is made available directly from measuring devices and should therefore be used with caution due to the abscence of manual quality assurance. In May-June each year quality assured data for the previous year is made available.
 
 ## License & conditions 
 
