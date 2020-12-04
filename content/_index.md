@@ -1,5 +1,5 @@
 ---
-Title: "Greentechdev is a initiative by the Swedish EPA to provide easy to use open data in the environmental domain"
+Title: "Greentechdev is a initiative by the Swedish EPA to provide easy to use open data and services in the environmental domain"
 Description: "A list of environmental data publicly available and free to use in the form of APIs and downloadable files (datasets)."
 Draft: false
 ---
