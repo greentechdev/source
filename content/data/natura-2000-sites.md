@@ -36,7 +36,7 @@ To better understand this data, the following model covers the basic parts:
 
 The OpenApi specification and examples below describe a REST API that exposes the whole data model, but has some limitations in the spatial aspects, e.g. geometries are only available in WKT format and there is no possibility to filter the results spatially. 
 
-However, a subset of this data is exposed through OGC Standard Compliant WMS and WFS services, as well as ArcGIS REST API. If your use case requires spatial operations we recommend combining this API with either OGC services or the Esri ArcGIS REST API.
+However, a subset of this data is exposed through OGC Standard Compliant WMS and WFS services. If your use case requires spatial operations we recommend combining this API with either OGC services.
 
 ### WMS and WFS services
 
@@ -47,12 +47,6 @@ The WMS service is available at
 
 The WFS service is available at
 * https://nvpub.vic-metria.nu/arcgis/services/N2000_WFS/MapServer/WFSServer
-
-The ArcGIS REST API is available at
-* https://nvpub.vic-metria.nu/arcgis/rest/services/N2000/MapServer
-* https://nvpub.vic-metria.nu/arcgis/rest/services/N2000_WFS/MapServer 
-
-See the API [Trails and devices in outdoor life](/data/trails-and-devices-in-outdoor-life) for a description, links and example based on the ArcGIS REST API.
 
 ### REST API
 

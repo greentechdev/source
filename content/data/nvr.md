@@ -43,7 +43,7 @@ To better understand this data, the following model covers the basic parts:
 
 The OpenApi specification and examples below describe a REST API that exposes the whole data model, but has some limitations in the spatial aspects, e.g. geometries are only available in WKT format and there is no possibility to filter the results spatially. 
 
-However, a subset of this data is exposed through OGC Standard Compliant WMS and WFS services, as well as ArcGIS REST API. If your use case requires spatial operations we recommend combining this API with either OGC services or the Esri ArcGIS REST API.
+However, a subset of this data is exposed through OGC Standard Compliant WMS and WFS services. If your use case requires spatial operations we recommend combining this API with the OGC services.
 
 ### WMS and WFS services
 
