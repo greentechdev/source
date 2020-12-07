@@ -55,12 +55,6 @@ The WMS service is available at
 The WFS service is available at
 * https://nvpub.vic-metria.nu/arcgis/services/Naturvardsregistret_WFS/MapServer/WFSServer
 
-The ArcGIS REST API is available at
-* https://nvpub.vic-metria.nu/arcgis/rest/services/Naturvardsregistret/MapServer
-* https://nvpub.vic-metria.nu/arcgis/rest/services/Naturvardsregistret_WFS/MapServer 
-
-See the API [Trails and devices in outdoor life](/data/trails-and-devices-in-outdoor-life) for a description, links and example based on the ArcGIS REST API.
-
 ### REST API
 
 * [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/nvr_api.yaml)
