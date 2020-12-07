@@ -57,10 +57,10 @@ The WFS service is available at
 
 ### REST API
 
+{{< swagger-ui url="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/nvr_api.yaml" height="1000" >}}
+
 * [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/nvr_api.yaml)
 * [Improve this specification](https://github.com/greentechdev/greentechdev.github.io/edit/master/nvr_api.yaml)
-
-{{< swagger-ui url="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/nvr_api.yaml" height="1000" >}}
 
 ## Example usage
 
