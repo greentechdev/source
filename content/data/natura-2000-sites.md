@@ -50,10 +50,10 @@ The WFS service is available at
 
 ### REST API
 
-* [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/n2000_api.yaml)
-* [Improve this specification](https://github.com/greentechdev/greentechdev.github.io/edit/master/n2000_api.yaml)
+{{< swagger-ui url="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/greentechdev/source/edit/master/static/n2000_api.yaml" height="1000" >}}
 
-{{< swagger-ui url="https://petstore.swagger.io/?url=https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/n2000_api.yaml" height="1000" >}}
+* [Download OpenAPI specification](https://raw.githubusercontent.com/greentechdev/greentechdev.github.io/master/n2000_api.yaml)
+* [Improve this specification](https://github.com/greentechdev/source/edit/master/static/n2000_api.yaml)
 
 ## Example usage
 
