@@ -23,7 +23,7 @@ jobs:
           extended: true
  
       - name: Build site with Hugo cli
-        run: hugo -t greentech
+        run: hugo
         
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
