@@ -11,7 +11,7 @@
           <div class="card card-list">
             <div class="card-body">
               <p class="text-muted pb-3">#{{ delimit .Params.tags " #" }}</p>
-              <h5 class="card-title">{{ .Title }}</h5>
+              <h1 class="card-title">{{ .Title }}</h1>
               <a href="{{ .Permalink }}" class="stretched-link card-text">{{ truncate 130 .Description }}</a>
             </div>
           </div>

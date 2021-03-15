@@ -10,7 +10,7 @@
     // Loop through all list items, and hide those who don't match the search query
     for (i = 0; i < cards.length; i++) {
       p = cards[i].getElementsByTagName("p")[0]
-      h = cards[i].getElementsByTagName("h5")[0]
+      h = cards[i].getElementsByTagName("h1")[0]
       a = cards[i].getElementsByTagName("a")[0];
       txtValue = (a.textContent || a.innerText) + (p.textContent || p.innerText) + (h.textContent || h.innerText);
       if (txtValue.toUpperCase().indexOf(filter) > -1) {

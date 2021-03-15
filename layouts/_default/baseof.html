@@ -4,23 +4,24 @@
 {{- partial "head.html" . -}}
 
 <body class="d-flex flex-column h-100">
+	<a class="skip-link" href="#content">Skip to content</a>
 		
 	{{- partial "header.html" . -}}
 	
-	<main role="main" class="flex-shrink-0">
+	<main class="flex-shrink-0">
 
 		<div class="container mb-5">
+			<div id="content">
 
-			{{- partial "browserwarning.html" . -}}
-			{{- block "main" . }}{{- end }}
+				{{- partial "browserwarning.html" . -}}
+				{{- block "main" . }}{{- end }}
 			
+			</div>
 		</div>
 		
 	</main>
 
 	{{- partial "footer.html" . -}}
-	
-	{{- partial "cookie-consent.html" . -}}
 	
 </body>	
 </html>

@@ -16,6 +16,10 @@ a, a:hover {
 .h3, h3 {
   font-size: 1.3rem;
 }
+.card-body h1 {
+  font-size: 1.3rem;
+  color: #46be2f;
+}
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
   font-weight: 400!important;
@@ -61,10 +65,6 @@ main > .container {
   border-color: #46be2f;
 }
 
-.card h5 {
-  color: #46be2f;
-}
-
 .btn-success {
   background-color: #46be2f;
 }
@@ -72,38 +72,6 @@ main > .container {
 a.stretched-link {
   text-decoration: none;
   color: inherit;
-}
-
-.card.accordion {
-  border: 0;
-}
-
-.accordion {
-  margin-bottom: 0.3rem;
-}
-
-.accordion > .card-header {
-  font-size: 1.5rem;
-  background-color: #ecf6ec;
-  border: 1px solid #ecf6ec;
-  border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
-  cursor: hand;
-}
-.accordion > .card-header:hover {
-  border-color: white;
-  background-color: #dcefdc;
-}
-
-.accordion-inner > .card-header {
-  font-size: 1.25rem;
-} 
-
-.accordion-inner > .card-body {
-  background-color: #ecf6ec;
-}
-
-.badge-primary {
-  background-color: #46be2f;
 }
 
 .caret {
@@ -125,6 +93,7 @@ i.caret {
   transform: rotate(-45deg);
   transition: transform 0.3s ease-out;
 }
+
 i.active {
   transform: rotate(45deg);
 }
@@ -139,29 +108,18 @@ footer {
   width: 100%;
 }
 
-footer a, #cookie-consent a {
+footer a {
   color: #eee;
   text-decoration: none;
   font-weight: bolder;
 }
 
-footer a:hover, footer a:active, #cookie-consent a:hover, #cookie-consent a:active {
+footer a:hover, footer a:active, #cookie-consent a:hover {
   color: #fff;
 }
 
 footer svg {
   vertical-align: sub;
-}
-
-#cookie-consent a {
-  text-decoration: underline;
-}
-
-#cookie-consent {
-  background-color: #333;
-  padding: .9rem;
-  color: #e5e5e5;
-  display: none;
 }
 
 a.btn {
@@ -194,4 +152,18 @@ button.try-button {
 
 ol>li {
   margin-bottom: 0.7rem;
+}
+
+.shortcode--swagger-ui {
+  margin-bottom: 15px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -200px;
+}
+
+iframe {
+  border: none; 
+  width: 100%;
 }

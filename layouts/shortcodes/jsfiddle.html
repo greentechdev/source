@@ -1,10 +1,9 @@
 <div class="shortcode shortcode--jsfiddle shortcode--code">
 	<iframe
-		width="100%"
-		height='{{ with .Get "height" }}{{.}}{{else}}300{{end}}'
+		height='{{ with .Get "height" }}{{.}}{{else}}300{{end}}'	
 		src='//jsfiddle.net/greentechdev/{{ .Get "id" }}{{ with .Get "rev" }}/{{.}}{{end}}/embedded/{{ with .Get "view"}}{{ . }}{{else}}result,js,html,css{{end}}/{{with .Get "color"}}{{.}}{{end}}'
-		allowfullscreen="allowfullscreen"
-		frameborder="0">
+		title='Embedded JS Fiddle'
+		allowfullscreen="allowfullscreen">
 	</iframe>
 </div>
 

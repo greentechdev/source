@@ -1,21 +1,19 @@
 <!-- bundle/minify etc the scripts -->
 {{ $js1 := resources.Get "js/fiddle.js" }}
 {{ $js2 := resources.Get "js/browserwarning.js" }}
-{{ $js3 := resources.Get "js/cookie-consent.js" }}
-{{ $js4 := resources.Get "js/filter-cards.js" }}
-{{ $js := slice $js1 $js2 $js3 $js4 | resources.Concat "js/scripts.js" | minify | fingerprint }}
+{{ $js3 := resources.Get "js/filter-cards.js" }}
+{{ $js := slice $js1 $js2 $js3 | resources.Concat "js/scripts.js" | minify | fingerprint }}
 <script type="text/javascript" src="{{ $js.RelPermalink }}"></script>
 
 <!-- footer -->
 <footer class="mt-auto">
-  <img id="footer-background" src="/landscape.svg" />
+  <img id="footer-background" src="/landscape.svg" alt="footer background image" />
   <div class="container">
     <div class="row">
       <div class="col-sm">
         &copy; GreenTechDev 2020<br />
         Website/docs provided as <a href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a><br />
         Code examples provided as <a href="{{ .Site.Params.codeRepo }}/blob/master/LICENSE" target="_blank">MIT</a><br />
-        Our <a href="{{ ref . "/cookie-policy.md" }}">Cookie policy</a><br />
         Last updated {{ .Lastmod.Format "2006-01-02" }}
 
       </div>
