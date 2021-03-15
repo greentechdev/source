@@ -4,7 +4,7 @@ function fiddle(elem, printResults, displayChart) {
 
   var form = document.createElement("form");
   form.method = "POST";
-  form.action = "http://jsfiddle.net/api/post/library/pure/";
+  form.action = "https://jsfiddle.net/api/post/library/pure/";
   form.target = "check";
 
   var js = document.createElement("textarea");
