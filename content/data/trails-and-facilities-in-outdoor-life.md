@@ -1,14 +1,14 @@
 ---
-Title: Trails and devices in outdoor life
+Title: Trails and facilities in outdoor life
 Date: 2020-10-06
-Description: Trails and devices (e.g. toilets, parking lots) in national parks or other nature areas
+Description: Trails and facilities (e.g. toilets, parking lots) in national parks or other nature areas
 Tags: ["API", "GEO"]
 Draft: false
 ---
 
-# Trails and devices in outdoor life
+# Trails and facilities in outdoor life
 
-Trails and devices (e.g. toilets, parking lots) in national parks or other nature areas.
+Trails and facilities (e.g. toilets, parking lots) in national parks or other nature areas.
 
 ## Data quality
 
@@ -48,7 +48,7 @@ The WFS service is available at
 
 ### ArcGIS REST API
 
-The OpenApi specification below describes two endpoints from the ArcGIS REST API that can be called to retrieve data for devices (anordningar) and trails (leder) from the service.
+The OpenApi specification below describes two endpoints from the ArcGIS REST API that can be called to retrieve data for facilities (anordningar) and trails (leder) from the service.
 
 For the complete documentation of this API, please refer to
 https://developers.arcgis.com/rest/services-reference/query-feature-service-layer-.htm
