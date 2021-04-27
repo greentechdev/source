@@ -47,9 +47,9 @@ The data is made available via a HTTP/REST API.
 
 See the following example for an illustration of how to use the API and data. It's written in JavaScript, so it's easy to try without downloading or installing anything. Click the button _"Try it!"_ below each block of code, or the link _"Edit in JSFiddle"_ in the top right corner of the live example to edit, run and play with them further.
 
-### Chart last 24h of NO2 at Hornsgatan
+### Chart 24h of NO2 at Hornsgatan
 
-Say we're looking to chart the levels of NO2 (nitrogen dioxide) at Hornsgatan, Stockholm for the last 24 hours and compare it to the the threshold value from the [environmental quality standards](https://www.naturvardsverket.se/Stod-i-miljoarbetet/Vagledningar/Luft-och-klimat/Miljokvalitetsnormer-for-utomhusluft/Gransvarden-malvarden-utvarderingstrosklar/). Something like
+Say we're looking to chart the levels of NO2 (nitrogen dioxide) at Hornsgatan, Stockholm how the were a year ago and compare it to the the threshold value from the [environmental quality standards](https://www.naturvardsverket.se/Stod-i-miljoarbetet/Vagledningar/Luft-och-klimat/Miljokvalitetsnormer-for-utomhusluft/Gransvarden-malvarden-utvarderingstrosklar/). Something like
 
 {{< jsfiddle id="0dax5c3L" color="light" view="result" height="380" >}}
 
@@ -134,13 +134,14 @@ So in three simple steps:
     "uom": "µg/m3",
     ...
     ```
-    Now let's get the data for this timeseries (ID = 59) and plot it on a chart. We'll use the "timespan"-parameter to limit the results to a day back from now. This example uses the ChartJS-library.
+    Now let's get the data for this timeseries (ID = 59) and plot it on a chart. We'll use the "timespan"-parameter to limit the results to a year back from now. This example uses the ChartJS-library.
 
     ```js
     //Create from and to-dates for the "timespan" API-parameter
     var toDate = new Date();
     var fromDate = new Date();
-    fromDate.setDate(toDate.getDate() - 1);
+    fromDate.setDate(toDate.getDate() - 365);
+    toDate.setDate(toDate.getDate() - 364);
 
     //Create URL for our timeseries and with the create timespan dates
     var url = "https://datavardluft.smhi.se/52North/api/v1/timeseries/59/getData?timespan=" + fromDate.toISOString() + "/" + toDate.toISOString();
