@@ -300,7 +300,7 @@ paths:
                 description: List(Omrade)
                 type: array
                 items:
-                  $ref: "#/components/schemas/Omrade"
+                  $ref: "#/components/schemas/OmradeNoLinks"
 
   /omrade/extentAsWkt:
     get:
@@ -1171,84 +1171,88 @@ components:
       type: object
       title: Site (no links)
       properties:
-        id:
-          description: NVR-id of site
-          type: string
-        beslutsstatus:
-          description: Decision status
-          type: string
-        namn:
-          description: Name of site
-          type: string
-        skyddstyp:
-          description: Protection type
-          type: string
-        lanAsText:
-          description: Region name(s)
-          type: string
-        kommunerAsText:
-          description: Municipality name(s)
-          type: string
-        beslutstyp:
-          description: Type of decision
-          type: string
-        beslutsdatum:
-          description: Date of decision
-          type: integer
-          format: int32
-        ursprBeslutsdatum:
-          description: Original decision date
-          type: integer
-          format: int32
-        gallandedatum:
-          description: Current decision date
-          type: integer
-          format: int32
-        iucnKategori:
-          description: IUCN category
-          type: string
-        forvaltare:
-          description: Public administration
-          type: string
-        areaHa:
-          description: Area in hecatres
-          type: number
-        landareaHa:
-          description: Land area in hectares
-          type: number
-        vattenareaHa:
-          description: Water area in hectares
-          type: number
-        skogAreaHa:
-          description: Forest area in hectares
-          type: number
-        beslutsmyndighet:
-          description: Authority
-          type: string
-        atomLink:
+        omrade:
+          type: object
+          properties:
+            id:
+              description: NVR-id of site
+              type: integer
+              format: int32
+            beslutsstatus:
+              description: Decision status
+              type: string
+            namn:
+              description: Name of site
+              type: string
+            skyddstyp:
+              description: Protection type
+              type: string
+            lanAsText:
+              description: Region name(s)
+              type: string
+            kommunerAsText:
+              description: Municipality name(s)
+              type: string
+            beslutstyp:
+              description: Type of decision
+              type: string
+            beslutsdatum:
+              description: Date of decision
+              type: string
+              format: date-time
+            ursprBeslutsdatum:
+              description: Original decision date
+              type: string
+              format: date-time
+            gallandedatum:
+              description: Current decision date
+              type: string
+              format: date-time
+            iucnKategori:
+              description: IUCN category
+              type: string
+            forvaltare:
+              description: Public administration
+              type: string
+            areaHa:
+              description: Area in hecatres
+              type: number
+            landareaHa:
+              description: Land area in hectares
+              type: number
+            vattenareaHa:
+              description: Water area in hectares
+              type: number
+            skogAreaHa:
+              description: Forest area in hectares
+              type: number
+            beslutsmyndighet:
+              description: Authority
+              type: string
+            atomLink:
+              description: ""
+              type: array
+              items:
+                type: object
+          example:
+            id: 2001362
+            beslutsstatus: Gällande
+            namn: "Store Mosse"
+            skyddstyp: "Nationalpark"
+            lanAsText: "Jönköpings Län"
+            kommunerAsText: "Gnosjö, Vaggeryd, Värnamo"
+            beslutstyp: "Beslut om bildande av Nationalpark"
+            beslutsdatum: "1982-05-06T00:00:00+02:00"
+            ursprBeslutsdatum: "1982-05-06T00:00:00+02:00"
+            gallandedatum: "1982-05-06T00:00:00+02:00"
+            iucnKategori: "II, Nationalpark (National Park)"
+            forvaltare: "Länsstyrelsen i Jönköpings län"
+            areaHa: 12345
+            landareaHa: 7409.47
+            vattenareaHa: 264.64
+            skogAreaHa: 652.15
+            beslutsmyndighet: "Riksdag/Regering"
           description: ""
-          type: array
-          items:
-            type: object
-      example:
-        id: 2001362
-        beslutsstatus: Gällande
-        namn: "Store Mosse"
-        skyddstyp: "Nationalpark"
-        lanAsText: "Jönköpings Län"
-        kommunerAsText: "Gnosjö, Vaggeryd, Värnamo"
-        beslutstyp: "Beslut om bildande av Nationalpark"
-        beslutsdatum: "1982-05-06T00:00:00+02:00"
-        ursprBeslutsdatum: "1982-05-06T00:00:00+02:00"
-        gallandedatum: "1982-05-06T00:00:00+02:00"
-        iucnKategori: "II, Nationalpark (National Park)"
-        forvaltare: "Länsstyrelsen i Jönköpings län"
-        areaHa: 12345
-        landareaHa: 7409.47
-        vattenareaHa: 264.64
-        skogAreaHa: 652.15
-        beslutsmyndighet: "Riksdag/Regering"
-      description: ""
 
     Omrade:
       type: object
