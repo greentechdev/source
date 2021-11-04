@@ -1107,28 +1107,32 @@ components:
       type: object
       title: Environmental objective
       properties:
-        nvrId:
-          description: NVR-id of site
-          type: string
-        beslutsstatus:
-          description: Decision status
-          type: string
-        namn:
-          description: Name of environmental objective
-          type: string
-        atomLink:
+        miljomal:
+          type: object
+          properties:
+            nvrId:
+              description: NVR-id of site
+              type: integer
+              format: int32
+            beslutsstatus:
+              description: Decision status
+              type: string
+            namn:
+              description: Name of environmental objective
+              type: string
+            atomLink:
+              description: ""
+              type: array
+              items:
+                type: object
+          example:
+            nvrId: 2001362
+            beslutsstatus: Gällande
+            namn: "12. Levande skogar"
+            atomLink:
+              - {"@rel": "self"}
+              - {"@href": "https://nvpub.vic-metria.nu/naturvardsregistret/v2/rest/miljomal/2001362/G%C3%A4llande/12.%20Levande%20skogar"}
           description: ""
-          type: array
-          items:
-            type: object
-      example:
-        nvrId: 2001362
-        beslutsstatus: Gällande
-        namn: "12. Levande skogar"
-        atomLink:
-          - {"@rel": "self"}
-          - {"@href": "https://nvpub.vic-metria.nu/naturvardsregistret/v2/rest/miljomal/2001362/G%C3%A4llande/12.%20Levande%20skogar"}
-      description: ""
 
     NmdKlass:
       type: object
