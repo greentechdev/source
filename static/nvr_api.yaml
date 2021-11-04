@@ -1384,7 +1384,7 @@ components:
 "@href": "https://nvpub.vic-metria.nu/naturvardsregistret/v2/rest/omrade/2001362/G%C3%A4llande/foreskriftsomraden"
 }
 ]
-                description: ""
+            description: ""
 
     Syfte:
       type: object
