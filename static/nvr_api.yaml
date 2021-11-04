@@ -976,70 +976,76 @@ components:
       type: object
       title: Decision document
       properties:
-        nvrId:
-          description: NVR-id of site
-          type: string
-        beslutsId:
-          description: Id of decision
-          type: string
-        beslutsstatus:
-          description: Decision status
-          type: string
-        beslutstyp:
-          description: Decision type
-          type: string
-        beslutsmyndighet:
-          description: Authority
-          type: string
-        diarienummer:
-          description: Registration number
-          type: string
-        beslutsdatum:
-          description: Decision date
-          type: integer
-          format: int32
-        gallandedatum:
-          description: Current decision date
-          type: integer
-          format: int32
-        id:
-          description: Id of document
-          type: string
-        namn:
-          description: Name of document
-          type: string
-        typ:
-          description: Type of document
-          type: string
-        mimeType:
-          description: MIME type of document
-          type: string
-        fileUrl:
-          description: URL to document file
-          type: string
-        atomLink:
+        beslutsdokument:
+          type: object
+          properties:
+            nvrId:
+              description: NVR-id of site
+              type: integer
+              format: int32
+            beslutsId:
+              description: Id of decision
+              type: integer
+              format: int32
+            beslutsstatus:
+              description: Decision status
+              type: string
+            beslutstyp:
+              description: Decision type
+              type: string
+            beslutsmyndighet:
+              description: Authority
+              type: string
+            diarienummer:
+              description: Registration number
+              type: string
+            beslutsdatum:
+              description: Decision date
+              type: string
+              format: date-time
+            gallandedatum:
+              description: Current decision date
+              type: string
+              format: date-time
+            id:
+              description: Id of document
+              type: integer
+              format: int32
+            namn:
+              description: Name of document
+              type: string
+            typ:
+              description: Type of document
+              type: string
+            mimeType:
+              description: MIME type of document
+              type: string
+            fileUrl:
+              description: URL to document file
+              type: string
+            atomLink:
+              description: ""
+              type: array
+              items:
+                type: object
+          example:
+            nvrId: 2001362
+            beslutsId: 100043
+            beslutsstatus: "Gällande"
+            beslutstyp: "Beslut om bildande av Nationalpark"
+            beslutsmyndighet: "Riksdag/Regering"
+            diarienummer: "JODEP 2516/79, 784/82 SNV 203-3207-81"
+            beslutsdatum: "1982-05-06T00:00:00+02:00"
+            gallandedatum: "1982-05-06T00:00:00+02:00"
+            id: 151124
+            namn: "Store mosse Regeringens beslut.pdf"
+            typ: "Beslut"
+            mimeType: "application/pdf"
+            fileUrl: "https://nvpub.vic-metria.nu/handlingar/rest/dokument/151124"
+            atomLink:
+              - {"@rel": "self"}
+              - {"@href": "https://nvpub.vic-metria.nu/naturvardsregistret/v2/rest/beslutsdokument/2001362/G%C3%A4llande/151124"}
           description: ""
-          type: array
-          items:
-            type: object
-      example:
-        nvrId: 2001362
-        beslutsId: 100043
-        beslutsstatus: "Gällande"
-        beslutstyp: "Beslut om bildande av Nationalpark"
-        beslutsmyndighet: "Riksdag/Regering"
-        diarienummer: "JODEP 2516/79, 784/82 SNV 203-3207-81"
-        beslutsdatum: "1982-05-06T00:00:00+02:00"
-        gallandedatum: "1982-05-06T00:00:00+02:00"
-        id: 151124
-        namn: "Store mosse Regeringens beslut.pdf"
-        typ: "Beslut"
-        mimeType: "application/pdf"
-        fileUrl: "https://nvpub.vic-metria.nu/handlingar/rest/dokument/151124"
-        atomLink:
-          - {"@rel": "self"}
-          - {"@href": "https://nvpub.vic-metria.nu/naturvardsregistret/v2/rest/beslutsdokument/2001362/G%C3%A4llande/151124"}
-      description: ""
 
     Foreskriftsomrade:
       type: object
