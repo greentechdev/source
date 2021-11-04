@@ -1134,44 +1134,49 @@ components:
       type: object
       title: NMD class
       properties:
-        nvrId:
-          description: NVR-id of site
-          type: string
-        beslutsstatus:
-          description: Decision status
-          type: string
-        kod:
-          description: NMD class code
-          type: string
-        namn:
-          description: NMD class name
-          type: string
-        areaHa:
-          description: Area in hectares
-          type: number
-        foreskriftstyp:
-          description: Rule type
-          type: string
-        foreskriftstypNamn:
-          description: Rule type name
-          type: string
-        atomLink:
+        nmdKlass:
+          type: object
+          properties:
+            nvrId:
+              description: NVR-id of site
+              type: integer
+              format: int32
+            beslutsstatus:
+              description: Decision status
+              type: string
+            kod:
+              description: NMD class code
+              type: integer
+              format: int32
+            namn:
+              description: NMD class name
+              type: string
+            areaHa:
+              description: Area in hectares
+              type: number
+            foreskriftstyp:
+              description: Rule type
+              type: number
+            foreskriftstypNamn:
+              description: Rule type name
+              type: string
+            atomLink:
+              description: ""
+              type: array
+              items:
+                type: object
+          example:
+            nvrId: 2001362
+            beslutsstatus: Gällande
+            kod: 111
+            namn: "Tallskog utanför våtmark"
+            areaHa: 12345
+            foreskriftstyp: 0
+            foreskriftstypNamn: "Ej foreskrift"
+            atomLink:
+              - {"@rel": "self"}
+              - {"@href": "https://nvpub.vic-metria.nu/naturvardsregistret/v2/rest/nmdklass/2001362/G%C3%A4llande/111"}
           description: ""
-          type: array
-          items:
-            type: object
-      example:
-        nvrId: 2001362
-        beslutsstatus: Gällande
-        kod: 111
-        namn: "Tallskog utanför våtmark"
-        areaHa: 12345
-        foreskriftstyp: 0
-        foreskriftstypNamn: "Ej foreskrift"
-        atomLink:
-          - {"@rel": "self"}
-          - {"@href": "https://nvpub.vic-metria.nu/naturvardsregistret/v2/rest/nmdklass/2001362/G%C3%A4llande/111"}
-      description: ""
 
     OmradeNoLinks:
       type: object
