@@ -11,7 +11,7 @@ Near real-time national air quality data from measuring stations - the air quali
 
 The data is provided in cooperation with [SMHI](https://smhi.se).
 
-See [Luftkvaliteten i realtid och preliminär statistik](https://www.naturvardsverket.se/Sa-mar-miljon/Klimat-och-luft/Statistik-om-luft/Luftkvaliteten-i-realtid/) for more information (Swedish).
+See [Luftkvaliteten i realtid och preliminär statistik](https://www.naturvardsverket.se/amnesomraden/luft/statistik--utslapp-och-halter/luftkvaliteten-i-realtid-och-preliminar-statistik/webbtjanster-luftkvalitetsdata/) for more information (Swedish).
 
 ## Data quality
 
