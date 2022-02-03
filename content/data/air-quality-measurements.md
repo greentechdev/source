@@ -59,7 +59,7 @@ So in three simple steps:
 
     ```js
     //make a search query for our term NO2
-    fetch("https://datavardluft.smhi.se/52North/api/v1/search?q=NO2")
+    fetch("https://datavardluft.smhi.se/52North/api/search?q=NO2")
       .then(response => response.json())
       .then(data => document.getElementById("results").innerHTML = JSON.stringify(data, null, 2));
     ```
@@ -80,7 +80,7 @@ So in three simple steps:
 
     ```js
     //URL to find stations filtered by our phenomenon ID 
-    var url = "https://datavardluft.smhi.se/52North/api/v1/stations/?phenomena=8";
+    var url = "https://datavardluft.smhi.se/52North/api/stations/?phenomena=8";
     
     //Using the "near"-parameter in the API to filter the list of stations by closeness to a point on a map we pick 
     var nearFilter = {
@@ -120,7 +120,7 @@ So in three simple steps:
 1) Using the Timeseries-resource to get our measurment data
     ```js
     //With our phenomenon- and station ID - see what timeseries there are  
-    fetch("https://datavardluft.smhi.se/52North/api/v1/timeseries/?phenomena=8&station=115")
+    fetch("https://datavardluft.smhi.se/52North/api/timeseries/?phenomena=8&station=115")
       .then(response => response.json())
       .then(data => document.getElementById("results").innerHTML = JSON.stringify(data, null, 2));
     ```
@@ -144,7 +144,7 @@ So in three simple steps:
     toDate.setDate(toDate.getDate() - 364);
 
     //Create URL for our timeseries and with the create timespan dates
-    var url = "https://datavardluft.smhi.se/52North/api/v1/timeseries/59/getData?timespan=" + fromDate.toISOString() + "/" + toDate.toISOString();
+    var url = "https://datavardluft.smhi.se/52North/api/timeseries/59/getData?timespan=" + fromDate.toISOString() + "/" + toDate.toISOString();
 
     //Get the data
     fetch(url)
